@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html amp lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>Docker คืออะไร ? - iOTech Enterprise</title><meta name="description" content="Docker คืออะไร + สอนวิธีใช้สไตล์ Web Developer บทความนี้ เราจะมาลองเล่น tool อีกตัวหนึ่ง ที่กำลังถูกพูดถึงมากที่สุดในตอนนี้อย่าง Docker กันครับ แต่เนื่องจา"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="Docker คืออะไร ? - iOTech Enterprise"><meta property="og:description" content="Docker คืออะไร + สอนวิธีใช้สไตล์ Web Developer บทความนี้ เราจะมาลองเล่น tool อีกตัวหนึ่ง ที่กำลังถูกพูดถึงมากที่สุดในตอนนี้อย่าง Docker กันครับ แต่เนื่องจา"><meta property="og:url" content="https://static.iotech.co.th/docker-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:section" content="Cloud Technology"><meta property="og:updated_time" content="2018-07-19T11:40:17+00:00"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF.png"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF.png"><meta property="og:image:width" content="1080"><meta property="og:image:height" content="666"><meta property="og:image:alt" content="Docker คืออะไร ?"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Docker คืออะไร ? - iOTech Enterprise"><meta name="twitter:description" content="Docker คืออะไร + สอนวิธีใช้สไตล์ Web Developer บทความนี้ เราจะมาลองเล่น tool อีกตัวหนึ่ง ที่กำลังถูกพูดถึงมากที่สุดในตอนนี้อย่าง Docker กันครับ แต่เนื่องจา"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF.png"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"Docker \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23 ?","description":"Docker \u0e04\u0e37\u0e2d\u0e2d\u0e30\u0e44\u0e23 + \u0e2a\u0e2d\u0e19\u0e27\u0e34\u0e18\u0e35\u0e43\u0e0a\u0e49\u0e2a\u0e44\u0e15\u0e25\u0e4c Web Developer \u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21\u0e19\u0e35\u0e49 \u0e40\u0e23\u0e32\u0e08\u0e30\u0e21\u0e32\u0e25\u0e2d\u0e07\u0e40\u0e25\u0e48\u0e19 tool \u0e2d\u0e35\u0e01\u0e15\u0e31\u0e27\u0e2b\u0e19\u0e36\u0e48\u0e07 \u0e17\u0e35\u0e48\u0e01\u0e33\u0e25\u0e31\u0e07\u0e16\u0e39\u0e01\u0e1e\u0e39\u0e14\u0e16\u0e36\u0e07\u0e21\u0e32\u0e01\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e43\u0e19\u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07 Docker \u0e01\u0e31\u0e19\u0e04\u0e23\u0e31\u0e1a \u0e41\u0e15\u0e48\u0e40\u0e19\u0e37\u0e48\u0e2d\u0e07\u0e08\u0e32","datePublished":"2018-06-20T13:15:18+00:00","dateModified":"2018-07-19T11:40:17+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/docker-%e0%b8%84%e0%b8%b7%e0%b8%ad%e0%b8%ad%e0%b8%b0%e0%b9%84%e0%b8%a3\/"},"author":{"@type":"Person","name":"monopeelz"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/06\/dockerF.png","width":1080,"height":666}}]</script><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+.amp-wp-unknown-size > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 1200px;
+	}
+
+html {
+	background: #30a0ff;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #30a0ff;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #30a0ff;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #30a0ff;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #30a0ff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://static.iotech.co.th/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #30a0ff;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style></head><body class="">
+
+<header id="top" class="amp-wp-header"><div>
+		<a href="https://static.iotech.co.th/">
+										<amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				iOTech Enterprise			</span>
+		</a>
+
+					</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Docker คืออะไร ?</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/3dfc673d874e49414ab90862b1375127?s=24&r=g" alt="monopeelz" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">monopeelz</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-20T20:15:18+00:00">
+		1 ปี ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="1024" height="631" src="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF-1024x631.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="" srcset="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF-1024x631.png 1024w, https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF-300x185.png 300w, https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF-768x474.png 768w, https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF.png 1080w" layout="intrinsic"><noscript><img width="1024" height="631" src="https://static.iotech.co.th/wp-content/uploads/2018/06/dockerF-1024x631.png" class="attachment-large size-large wp-post-image" alt="" sizes="(max-width: 1024px) 100vw, 1024px"></noscript></amp-img></figure><div class="amp-wp-article-content">
+		<header class="article__header"><h1 class="article__title">Docker คืออะไร + สอนวิธีใช้สไตล์ Web Developer</h1>
+<section class="article__meta article__meta--share meta"><div class="article__share share">
+<div class="share__total"></div>
+</div>
+</section></header><div class="article__content">
+<p>บทความนี้ เราจะมาลองเล่น tool อีกตัวหนึ่ง ที่กำลังถูกพูดถึงมากที่สุดในตอนนี้อย่าง Docker กันครับ แต่เนื่องจากความสามารถของ Docker นั้น ค่อนข้างจะกว้าง หากให้เล่าทั้งหมดก็คงจะใช้เวลาเยอะเลยทีเดียว บทความนี้ผมเลยจะขอเน้นไปที่การใช้งาน Docker ในแง่ของการพัฒนาเว็บไซต์เป็นหลักแล้วกันนะครับ</p>
+<h2>ปัญหาที่เราเจอกันบ่อยๆ</h2>
+<h3>1. เสียเวลาติดตั้ง Application</h3>
+<p>ปัญหายอดฮิตของ web developer ทุกคนเลยก็คือ การเสียเวลาไปกับการติดตั้งพวก application ต่างๆ ที่โปรเจคนั้นๆ จำเป็นต้องใช้ ลองคิดกันเล่นๆ ว่าถ้าเราจะทำเว็บด้วย WordPress เราจะต้องลงอะไรบ้าง ?</p>
+<p>ที่ต้องลงแน่ๆ เลยก็จะเป็น web server อย่าง Apache หรือ nginx ถูกมั้ยครับ จากนั้นเราก็จะต้องลง PHP แล้วก็ database อย่าง MySQL รวมไปถึง tool อย่าง phpMyAdmin ด้วย และที่ขาดไม่ได้เลยก็คือตัว WordPress เองครับ ส่วนใครอยากจะให้เว็บโหลดเร็วๆ หน่อย ก็อาจจะต้องลง Memcached เพิ่มเข้าไปอีก</p>
+<p>จะเห็นว่าขั้นตอนพวกนี้มันกินเวลาไปไม่น้อยเลยล่ะครับ แล้วถ้าโปรเจคนั้นต้องการใช้ application อะไรที่การติดตั้งมันมีความซับซ้อนมากขึ้นกว่านี้ หรือเป็น application ที่เราไม่เคยติดตั้งมาก่อน อย่าง Jenkins, Elasticsearch หรือ Cassandra เราก็จะยิ่งเสียเวลามากขึ้นไปอีกครับ</p>
+<h3>2. เครื่อง Dev กับ Production ไม่เหมือนกัน</h3>
+<p>อีกปัญหาที่ผมคิดว่าเราน่าจะเจอกันทุกคนเลยก็คือ สภาพแวดล้อมของการ dev กับ production มันไม่เหมือนกันครับ สมมติเราได้งานฟรีแลนซ์มา 2 งาน งานนึง server ลูกค้าเค้าใช้ PHP 7 อีกงาน server เค้าใช้ HHVM แล้วเราดัน dev บนเครื่องที่ใช้ PHP 5 ปรากฏว่าพอเอางานขึ้นไปแล้วมีปัญหาครับ เนื่องจากเราไม่เคยเทสกับสภาพแวดล้อมของ production มาก่อนเลยนั่นเอง แล้วการที่จะทำให้สภาพแวดล้อมของเครื่อง dev เหมือนกับ production เป๊ะๆ  นี่ก็ไม่ใช่เรื่องง่ายเลย</p>
+<h2><b>ปัญหาหมดไป เมื่อมี Docker</b></h2>
+<p>ปัญหาดังกล่าวจะไม่เกิดขึ้นเลยครับ ถ้าเราใช้ tool ที่มีชื่อว่า Docker <strong>เพราะเจ้าDocker ที่ว่านี้ มันมีความสามารถในการ “ห่อ” เจ้า application ต่างๆ ให้อยู่ในรูปของ “container” ที่เราสามารถนำไปติดตั้งที่เครื่องไหนก็ได้ที่มี Docker รันอยู่</strong> ด้วยความสามารถนี้เอง ที่ทำให้ web developer อย่างเราสบายขึ้น ไม่ว่าจะในฐานะ…</p>
+<h3>คนนำ Container ไปใช้</h3>
+<p>อย่างที่เล่าไปก่อนหน้านี้ครับว่า บาง application นั้นมีขั้นตอนการติดตั้งที่ยุ่งยากซับซ้อน หากเราใช้ Docker เราก็แค่ไปโหลด container ที่ชาวบ้านเค้าทำไว้ดีแล้วมาใช้ได้เลย เราอาจจะโหลด container ของ Apache, PHP, MySQL มาก่อน แล้วค่อยลง WordPress เพิ่มเข้าไปเอง หรือจะเลือกโหลด container ของ WordPress แบบพร้อมใช้งานมาเลยก็ได้ สมมติเราได้งานที่ server เค้าลง PHP 5.3 ไว้ เราก็ไปโหลด container ของ PHP 5.3 มารัน หากดึกคืนนั้นมีลูกค้าเก่ามาขอให้ช่วยแก้งานที่ใช้ PHP 5.6 เราก็สลับไปรัน container ของ PHP 5.6 แทน อะไรทำนองนี้ครับ</p>
+<h3>คนสร้าง Container เอง</h3>
+<p>สมมติว่าเราได้งาน Node.js ชิ้นใหญ่มา แล้วเราก็ติดตั้ง application ต่างๆ ที่จำเป็นต้องใช้เรียบร้อยแล้ว บังเอิญเราได้เพื่อนมาช่วยเขียนโค้ดอีกคน แล้วเราอยากให้เครื่องของเพื่อนมีสภาพแวดล้อมเหมือนเราเป๊ะๆ เลย สิ่งที่เราต้องทำก็แค่ห่อ application ต่างๆ ที่เราได้ลงไว้ ให้กลายเป็น container ของ Docker ครับ จากนั้นเราก็บอกให้เพื่อนลง Docker ซะ แล้วเราก็ส่ง container ของเรา ไปให้เพื่อนรัน เพียงเท่านี้เพื่อนของเราก็จะสามารถเริ่มงานได้ทันทีแล้วล่ะครับ</p>
+<h2>รู้จัก Docker ให้มากขึ้น</h2>
+<p>มาถึงตรงนี้ ผมว่าเพื่อนๆ คงพอจะเห็นภาพแล้วว่า Docker มันช่วยอะไรเราได้บ้าง แต่ก่อนที่เราจะลองเล่นมัน ผมอยากจะให้เราเข้าใจหลักการทำงานของมันสักนิดนึงก่อนครับ</p>
+<h3 class="selectionShareable">1. Docker ต้องใช้กับ Linux</h3>
+<p>Docker นั้นใช้ฟีเจอร์บางอย่างของ Linux ครับ นั่นหมายความว่าเครื่องของเราจะต้องติดตั้ง Linux ก่อน ถึงจะรัน Docker ได้ <strong>แต่หากใครใช้ Windows หรือ Mac OS X อยู่ แล้วไม่อยากจะเปลี่ยนไปใช้ Linux เราอาจจะใช้ตัวช่วยอย่าง Vagrant หรือ Boot2Docker ในการจำลอง Linux ขึ้นมาก็ได้เช่นกันครับ</strong></p>
+<h3>2. Container ของ Docker เร็วกว่า VM</h3>
+<p>บางคนอาจจะบอกว่าสิ่งที่ Docker ทำได้นั้น เราก็สามารถใช้ VM ทำได้เหมือนกันนะ ถูกครับ เพียงแต่ว่ามันจะช้ากว่า Docker เยอะเลยอะครับ ที่เป็นเช่นนี้ก็เพราะว่าในแต่ละ container ของ Docker นั้น จะแชร์ตัว OS รวมไปถึง CPU และ memory ร่วมกันครับ เลยทำให้แต่ละ container นั้นเบามากๆ ไม่เหมือนกับ VM ที่แต่ละตัวจะต้องมี OS เป็นของตัวเอง และเรายังต้องคอยจัดสรรทรัพยากรต่างๆ ให้อีกด้วยครับ บางตัวรันอยู่แต่ไม่ได้ใช้งานเลย ก็เท่ากับว่าเราเสียทรัพยากรไปฟรีๆ</p>
+<h3>3. Docker มีระบบ Registry</h3>
+<p>คำถามที่น่าจะสงสัยกันก็คือ แล้วเราจะหา container ที่เราต้องการจะใช้ได้จากที่ไหน คำตอบคือ Docker เค้าจะมีระบบ registry ที่มีชื่อว่า Docker Hub ที่จะเปิดให้คนทั่วไปสามารถเอา container ที่ตัวเองสร้างขึ้นมาเก็บไว้ที่ส่วนกลางเพื่อที่จะได้แบ่งปันให้คนอื่นได้ใช้ด้วยครับ อารมณ์เดียวกับ Node.js ที่มี npm นั่นแหละ สิ่งที่เราต้องทำก็แค่เข้าเว็บ Docker Hub แล้วก็ search หา container ที่ต้องการจะใช้ container ไหนสร้างโดย official เองก็จะมีคนโหลดเยอะหน่อยครับ</p>
+<h3>4. วิธีสร้าง Container ของ Docker</h3>
+<p>container ของ Docker นั้นถูกสร้างมาจาก Docker image อีกทีครับ สมมติเราอยากจะสร้าง container ของ Apache เอาไว้ใช้งานเอง เราก็จะต้องสร้าง Docker image ที่บรรจุ Apache ไว้ข้างในขึ้นมาซะก่อน แล้วจึงสั่งให้ Docker รัน image ตัวนี้</p>
+<p>ส่วนวิธีสร้างตัว Docker image นั้นก็ไม่ยากเลยครับ ให้เราสร้างไฟล์เปล่าๆ ที่เรียกกันว่า <code>Dockerfile</code> ขึ้นมา แล้วก็ใส่ command ต่างๆ ของ Linux ที่เอาไว้ติดตั้ง Apache ลงไป จากนั้นก็สั่งให้ Docker ทำการ build เจ้าไฟล์นี้ให้กลายเป็น Docker image ครับ แล้วถ้าเราอยากจะแชร์ image นี้ให้คนอื่นได้ใช้ผ่าน Docker Hub ด้วย เราก็สามารถ push ขึ้นไปผ่าน command ของ Docker ได้เลย</p>
+<h2>สรุปอีกที! ก่อนใช้งาน Docker</h2>
+<p>เพื่อให้แน่ใจว่าทุกคนเข้าใจ Docker เป็นอย่างดีแล้ว ผมจะขอสรุปภาพรวมให้ฟังอีกที โดยจะแบ่งออกเป็นส่วนๆ ดังนี้ครับ</p>
+<ul class="no-bullet"><li><strong>Application</strong>คือ สิ่งที่เราต้องการจะใช้งาน เช่น Apache, PHP, MySQL, WordPress, Laravel เป็นต้น</li>
+<li><strong>Docker image</strong>คือ ไฟล์ image ที่บรรจุ application ข้างต้นเอาไว้ โดยไฟล์นี้ได้มาจากการ build ไฟล์ <code>Dockerfile</code> ที่ใส่ command ของ Linux สำหรับติดตั้ง application ดังกล่าวเอาไว้</li>
+<li><strong>Docker container</strong>คือ กล่องที่บรรจุ application ที่พร้อมทำงาน ซึ่งเป็นผลมาจากการรัน Docker image</li>
+<li><strong>Docker Hub </strong>คือ  ที่ๆ เราสามารถอัพโหลด image ที่ตัวเองสร้างขึ้นไปเพื่อแบ่งปันให้คนอื่นได้ใช้ด้วย หรือเราจะดาวน์โหลด image ที่คนอื่นทำไว้ดีแล้วมาใช้งานเลยก็ได้</li>
+</ul><p>มาถึงตรงนี้ พื้นฐานเกี่ยวกับ Docker ของทุกคนคงจะแน่นปึ๊กแล้ว ผมว่าเรามาเริ่มใช้ Docker กันเลยดีกว่าครับ</p>
+<h2>Workshop</h2>
+<p>ก่อนที่เราจะมาเริ่มใช้งาน Docker ผมอยากให้เราดู OS ของเครื่องที่เราใช้อยู่ก่อนนะครับว่ามันเป็นอะไร</p>
+<ul class="no-bullet"><li><strong>Windows / Mac OS X </strong>ต้องติดตั้ง Docker Machine เพื่อจำลอง Linux ขึ้นมาก่อน แล้วค่อยติดตั้ง Docker Engine อีกที</li>
+<li><strong>Linux</strong>สามารถติดตั้ง Docker Engine ได้ทันที</li>
+</ul><p>สำหรับบทความนี้ ผมจะขอถือว่าเราใช้ Mac OS X แล้วกันนะครับ หากใครใช้ OS อื่น ก็ไม่เปนไรฮะ เพราะวิธีการใช้งานนั้น ไม่ได้แตกต่างกันมาก</p>
+<h3>1. ติดตั้ง Docker Toolbox</h3>
+<p>ขั้นตอนแรกให้เราไปดาวน์โหลด <a title="Docker Toolbox" href="https://www.docker.com/toolbox" target="_blank" rel="noopener">Docker Toolbox</a> มาก่อนฮะ พอโหลดเสร็จก็ติดตั้งได้เลย แล้วเราก็จะเจอหน้าจอถามว่าเราต้องการจะติดตั้งอะไรบ้าง</p>
+<div id="attachment_9669" class="wp-caption aligncenter">
+<p><a href="http://www.siamhtml.com/wp-content/uploads/2015/08/Docker-Installer.png"><amp-img class="wp-image-9669 size-full amp-wp-enforced-sizes" src="http://www.siamhtml.com/wp-content/uploads/2015/08/Docker-Installer.png" alt="สิ่งที่ Docker Toolbox เตรียมมาให้" width="620" height="438" layout="intrinsic"></amp-img></a></p>
+<p class="wp-caption-text">สิ่งที่ Docker Toolbox เตรียมมาให้</p>
+</div>
+<ul class="no-bullet"><li><strong>Docker Client</strong>เป็นตัว Docker จริงๆ</li>
+<li><strong>Docker Machine</strong>ตัวจำลอง Linux เพื่อที่จะสามารถใช้งาน Docker Client ได้</li>
+<li><strong>Docker Compose</strong>tool อำนวยความสะดวกในการรัน container ของ Docker</li>
+<li><strong>Docker Quickstart Terminal app</strong>terminal ที่เอาไว้ใช้รัน Docker</li>
+<li><strong>Kitematic</strong>Docker เวอร์ชั่นที่เป็น GUI</li>
+<li><strong>Oracle VM VirtualBox</strong>VM ที่เอาไว้ใช้ร่วมกับ Docker Machine ในการจำลอง Linux</li>
+</ul><p>ผมแนะนำให้เราลงทั้งหมดเลยฮะ สำหรับใครที่เคยลง VirtualBox มาแล้ว ผมขอแนะนำให้ใช้ตัวที่มากับ Docker Toolbox นะครับ เพราะจะเป็นเวอร์ชั่นที่ใหม่กว่า</p>
+<h3>2. ลองรัน Docker</h3>
+<p>พอลงเสร็จแล้ว ให้เราเทสการทำงานของ Docker ด้วยการเปิด Docker CLI ขึ้นมาครับ สิ่งที่เกิดขึ้นก็คือมันจะไปรัน Docker Machine เพื่อที่จะสร้าง VM ของ Linux ขึ้นมา ให้เรารอจนมันสร้างเสร็จครับ</p>
+<h3>3. ดู IP ของ Docker Machine</h3>
+<p>พอได้ VM มาแล้ว ให้เราดู IP address ของ VM ด้วยคำสั่งนี้ฮะ</p>
+<div id="crayon-5b2993f0530c1385748231" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530c1385748231-1" class="crayon-line"><span class="crayon-v">docker</span><span class="crayon-o">–</span><span class="crayon-e">machine </span><span class="crayon-r">ls</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>สมมติว่าเราได้ IP มาเป็น <code>192.168.99.100</code> เราก็จะสามารถพรีวิวเว็บที่เราทำผ่าน <a title="Docker Machine Web Server" href="http://192.168.99.100/" target="_blank" rel="noopener">http://192.168.99.100/</a> ครับ ให้เราลองเปิด url นี้ดูเลย เราก็จะพบว่ามันยังเข้าไม่ได้ เพราะว่าเรายังไม่ได้ลง web server เลยนั่นเองครับ</p>
+<h3>4. SSH เข้าไปที่ Docker Machine</h3>
+<p>ก่อนที่จะติดตั้ง web server เราจะต้องเข้าใจก่อนนะครับว่า ตอนนี้เรายังอยู่บน Mac OS X อยู่เลย แล้วสิ่งที่เราต้องการจะทำก็คือการลง web server ที่ตัว Docker Machine ครับ เพราะฉะนั้นเราจะต้อง SSH เข้าไปที่เครื่อง Docker Machine ก่อน ด้วยคำสั่งนี้ครับ</p>
+<div id="crayon-5b2993f0530db287088490" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530db287088490-1" class="crayon-line"><span class="crayon-v">docker</span><span class="crayon-o">–</span><span class="crayon-e">machine </span><span class="crayon-e">ssh </span><span class="crayon-st">default</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>เพียงเท่านี้ เราก็จะเข้ามาอยู่ในตัว Docker Machine แล้วล่ะครับ command อะไรที่เราจะรันในนี้ ก็จะมีผลกับตัว VM เท่านั้น ไม่ใช่กับ Mac OS X แล้ว</p>
+<h3>5. โหลด Docker image</h3>
+<p>ตอนนี้เราพร้อมที่จะติดตั้ง web server แล้วครับ ให้เราเข้าเว็บ <a title="Docker Hub" href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a> แล้ว search หา Apache ได้เลย แต่ถ้างานของเราจะต้องใช้ PHP อยู่แล้ว เราจะ search หา PHP ไปเลยก็ได้นะครับ เพราะ Docker image ของ PHP นั้น จะมีแบบพ่วง Apache มาให้ด้วย</p>
+<div id="attachment_9663" class="wp-caption aligncenter">
+<p><amp-img class="wp-image-9663 size-full amp-wp-enforced-sizes" src="http://www.siamhtml.com/wp-content/uploads/2015/08/docker-hub.png" alt="Docker Hub" width="639" height="537" layout="intrinsic"></amp-img></p>
+<p class="wp-caption-text">ค้นหา PHP จาก Docker Hub</p>
+</div>
+<p>เมื่อเจอ Docker image ที่ต้องการแล้ว เราก็สามารถโหลด Docker image นั้นมาใช้ด้วย command ด้านล่างนี้ครับ</p>
+<div id="crayon-5b2993f0530e2705516737" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530e2705516737-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-v">run</span> <span class="crayon-o">—</span><span class="crayon-e">name </span><span class="crayon-v">myContainer</span> <span class="crayon-o">–</span><span class="crayon-v">d</span> <span class="crayon-o">–</span><span class="crayon-i">p</span> <span class="crayon-cn">9999</span><span class="crayon-o">:</span><span class="crayon-cn">9999</span> <span class="crayon-v">image</span><span class="crayon-o">:</span><span class="crayon-v">tag</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>command อาจจะดูยาวๆ นะครับ มาดูว่าแต่ละ option มันเอาไว้ทำอะไรบ้าง</p>
+<ul class="no-bullet"><li><strong>run</strong>คือ การสั่งให้ Docker สร้าง container ขึ้นมาจาก Docker image</li>
+<li><strong>–name myContainer</strong>คือ การตั้งชื่อให้กับ container ที่จะถูกสร้าง แนะนำให้ตั้งชื่อให้สื่อความหมายหน่อยนะครับ เพราะเราจะต้องใช้ชื่อนี้ในการ start/stop container ด้วย</li>
+<li><strong>-d</strong>เป็นการสั่งให้รันแบบ background</li>
+<li><strong>-p 9999:9999</strong>เอาไว้จับคู่ port ของ Docker Machine กับ port ของ container ครับ อย่าง container ของ Apache นี่เค้าจะใช้ port 80 หากเราต้องการจะให้ Docker Machine ใช้ port 80 เหมือนกัน เราก็กำหนดให้เป็น -p 80:80</li>
+<li><strong>image:tag</strong>ชื่อของ Docker image ที่เราต้องการจะโหลดมาใช้ (ดูชื่อได้จากหน้า image ที่ Docker Hub) ตรงนี้เราสามารถเลือกเวอร์ชั่นย่อยของ image ได้ด้วยการระบุ tag ลงไปนะครับ หากไม่ระบุ ก็จะถือว่าเราเลือกเวอร์ชั่นล่าสุด</li>
+</ul><p>ว่าแล้วก็ลองรัน command สำหรับโหลด PHP ดูเลยฮะ</p>
+<div id="crayon-5b2993f0530e9572778327" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530e9572778327-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-v">run</span> <span class="crayon-o">—</span><span class="crayon-e">name </span><span class="crayon-v">php5</span><span class="crayon-sy">.</span><span class="crayon-cn">6</span> <span class="crayon-o">–</span><span class="crayon-v">d</span> <span class="crayon-o">–</span><span class="crayon-i">p</span> <span class="crayon-cn">80</span><span class="crayon-o">:</span><span class="crayon-cn">80</span> <span class="crayon-v">php</span><span class="crayon-o">:</span><span class="crayon-cn">5.6</span><span class="crayon-o">–</span><span class="crayon-v">apache</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>หลังจากรัน command ด้านบน สิ่งที่เกิดขึ้นก็คือ</p>
+<ul><li>Docker ตรวจสอบว่าเครื่องเรามีการโหลด image ชื่อ php ที่มี tag เป็น 5.6-apache แล้วหรือยัง</li>
+<li>ถ้ายัง Docker ก็จะไปโหลด image จาก Docker Hub มาให้</li>
+<li>พอได้ image มาแล้ว Docker ก็จะรัน image นั้นให้กลายเป็น container พร้อมกับตั้งชื่อว่า php5.6 ตามที่เราได้ระบุไว้</li>
+<li>จับคู่ port 80 ของ Docker Machine เข้ากับ port 80 ของ container</li>
+</ul><p>ขั้นตอนนี้อาจจะต้องรอโหลดนานนิดนึงนะครับ เพราะ image จะมีขนาดประมาณ 100 MB พอ Docker รันเสร็จแล้ว ก็ลองเข้า <a title="Docker Machine Web Server" href="http://192.168.99.100/" target="_blank" rel="noopener">http://192.168.99.100/</a> ดูอีกทีครับ คราวนี้เราจะเจอข้อความ Forbidden แทน เพราะตอนนี้ยังไม่มีไฟล์อะไรอยู่ใน document root ของ Apache เลยนั่นเองฮะ</p>
+<h3>6. Map folder</h3>
+<p>เพื่อให้ Apache ใน container มองเห็นงานที่เราเคยทำไว้ เราจะต้องเชื่อมประตูมิติครับ แต่การจะเชื่อมนั้น เราจะต้องทำอยู่ 2 จุดด้วยกัน</p>
+<h4>1. ระหว่าง Mac OS X กับ Docker Machine</h4>
+<p>ในส่วนนี้ ผมขออธิบายเป็นขั้นตอนตามนี้ครับ</p>
+<ul><li>ปิด Docker CLI แล้วไปที่ VirtualBox</li>
+<li>ไปที่ VM ชื่อ default แล้วเลือก Settings</li>
+<li>ไปที่ Shared Folders</li>
+<li>เลือก Folder Path ให้ตรงกับ folder ที่เก็บงานของเราไว้ เช่น “/Users”</li>
+<li>ระบุ Folder Name ที่จะให้ mount ไปยัง VM เช่น “Users”</li>
+<li>ปิดเครื่อง VM นั้น แล้วเข้า Docker CLI ใหม่อีกครั้ง</li>
+</ul><div id="attachment_9662" class="wp-caption aligncenter">
+<p><a href="http://www.siamhtml.com/wp-content/uploads/2015/08/map-folder.png"><amp-img class="wp-image-9662 size-full amp-wp-enforced-sizes" src="http://www.siamhtml.com/wp-content/uploads/2015/08/map-folder.png" alt="เข้าไปกำหนด Shared Folders ของ VirtualBox" width="775" height="623" layout="intrinsic"></amp-img></a></p>
+<p class="wp-caption-text">เข้าไปกำหนด Shared Folders ของ VirtualBox</p>
+</div>
+<p>จากนั้นให้เราเข้าไปที่เครื่อง Docker Machine อีกครั้ง เพื่อดูว่ามันเห็นไฟล์งานของเราแล้วหรือยัง ให้เรารัน command ด้านล่างนี้ ตามลำดับครับ</p>
+<div id="crayon-5b2993f0530f0111857123" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+<div class="crayon-num crayon-striped-num">2</div>
+<div class="crayon-num">3</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530f0111857123-1" class="crayon-line"><span class="crayon-v">docker</span><span class="crayon-o">–</span><span class="crayon-e">machine </span><span class="crayon-e">ssh </span><span class="crayon-st">default</span></div>
+<div id="crayon-5b2993f0530f0111857123-2" class="crayon-line crayon-striped-line"><span class="crayon-r">cd</span> <span class="crayon-o">/</span><span class="crayon-e">Users</span></div>
+<div id="crayon-5b2993f0530f0111857123-3" class="crayon-line"><span class="crayon-r">ls</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>ถ้าไม่มีอะไรผิดพลาด เราจะพบว่างานของเราที่เคยอยู่ใน <code>/Users</code> บน Mac OS X มันเข้ามาอยู่ใน Docker Machine แล้วครับ การเชื่อมประตูมิติจุดแรกได้เสร็จลงแล้ว</p>
+<h4>2. ระหว่าง Docker Machine กับ container</h4>
+<p>อีกจุดที่เราต้องทำก็คือการทำให้ Apache ใน container มองเห็นงานของเราบน Docker Machine ครับ ให้เราเพิ่ม option ของการ map folder ระหว่าง Docker Machine กับ container เข้าไปใน command แบบนี้</p>
+<div id="crayon-5b2993f0530f5480580108" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530f5480580108-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-v">run</span> <span class="crayon-o">—</span><span class="crayon-e">name </span><span class="crayon-v">php5</span><span class="crayon-sy">.</span><span class="crayon-cn">6</span> <span class="crayon-o">–</span><span class="crayon-v">d</span> <span class="crayon-o">–</span><span class="crayon-i">p</span> <span class="crayon-cn">80</span><span class="crayon-o">:</span><span class="crayon-cn">80</span> <span class="crayon-o">–</span><span class="crayon-v">v</span> <span class="crayon-o">/</span><span class="crayon-v">Users</span><span class="crayon-o">/</span><span class="crayon-v">siamhtml</span><span class="crayon-o">/</span><span class="crayon-v">Sites</span><span class="crayon-o">/</span><span class="crayon-o">:</span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span> <span class="crayon-v">php</span><span class="crayon-o">:</span><span class="crayon-cn">5.6</span><span class="crayon-o">–</span><span class="crayon-v">apache</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>command ด้านบน จะเป็นการเชื่อม <code>/Users/siamhtml/Sites/</code> ซึ่งเป็นที่เก็บงานของผม เข้ากับ document root ของ Apache ครับ หากเรารันแล้ว Error ก็ไม่ต้องตกใจไปนะครับ เพราะสาเหตุของ Error นั้นมีอยู่ไม่กี่อย่างฮะ</p>
+<p><strong>2.1 Port ถูกใช้ไปแล้ว</strong></p>
+<p>ถ้าเจอ Error แบบนี้ แปลว่ามี container อื่น ใช้ port 80 ไปแล้วครับ ให้เราลิส container ทั้งหมด ที่กำลังรันอยู่มาดูด้วย command</p>
+<div id="crayon-5b2993f0530fb190433415" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530fb190433415-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-r">ps</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>เราก็จะเห็นรายการ container ทั้งหมด ที่กำลังรันอยู่ครับ ให้เรามองหาคอลัมน์ PORTS แล้วดูว่า container ไหน ที่มันใช้ port 80 อยู่ เมื่อเจอแล้วก็ดูที่คอลัมน์ NAMES แล้วจำชื่อ container นั้นไว้ครับ เพราะเราจะต้องเอามาใช้ในการ stop มันด้วย สมมติว่า container ที่เอา port 80 ไป คือ container เดิมที่เราเคยรันไว้ก่อนหน้านี้นี่แหละ ให้เรา stop มันด้วย command นี้ครับ</p>
+<div id="crayon-5b2993f0530ff484649401" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f0530ff484649401-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-e">stop </span><span class="crayon-v">php5</span><span class="crayon-sy">.</span><span class="crayon-cn">6</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>จากนั้นก็ลองรัน command ที่พ่วง option สำหรับ map folder ดูอีกทีฮะ คราวนี้น่าจะผ่านแล้ว</p>
+<p><strong>2.2 ชื่อ Container ซ้ำ</strong></p>
+<p>แต่ถ้ายังเจอ Error นี้อีก ก็แปลว่ามี container อื่น ใช้ชื่อนี้ไปแล้วฮะ ซึ่งในกรณีนี้ก็คือ container เดิม ที่เราเคยสร้างไว้แต่ยังไม่ได้ map folder นั่นเอง เพื่อความชัวร์ เราสามารถดูรายการ container ทั้งหมดที่มีอยู่ในเครื่องได้ด้วย command นี้ครับ</p>
+<div id="crayon-5b2993f053104159281107" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f053104159281107-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-r">ps</span> <span class="crayon-o">–</span><span class="crayon-v">a</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>รับรองว่าเราจะต้องเจอ container ที่มีชื่อว่า php5.6 อย่างแน่นอนครับ ให้เราลบ container นั้นออกก่อนด้วย command นี้</p>
+<div id="crayon-5b2993f053109840063748" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f053109840063748-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-r">rm</span> <span class="crayon-v">php5</span><span class="crayon-sy">.</span><span class="crayon-cn">6</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>เสร็จแล้วก็ลองรัน command ที่พ่วง option สำหรับ map folder ดูอีกทีฮะ หากไม่มี Error อะไรแล้ว ให้เราเทสการทำงานด้วยการสร้างไฟล์ชื่อ <code>phpinfo.php</code> ขึ้นมา แล้วใส่โค้ดนี้ลงไป</p>
+<div id="crayon-5b2993f05310d167585495" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+<div class="crayon-num crayon-striped-num">2</div>
+<div class="crayon-num">3</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f05310d167585495-1" class="crayon-line"><span class="crayon-ta"><?php</span></div>
+<div id="crayon-5b2993f05310d167585495-2" class="crayon-line crayon-striped-line"><span class="crayon-e">phpinfo</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div>
+<div id="crayon-5b2993f05310d167585495-3" class="crayon-line"><span class="crayon-ta">?></span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>จากนั้นก็เอาไปใส่ไว้ใน document root ของ Mac OS X ได้เลยครับ แล้วลองเข้าไปที่ <a title="PHP info" href="http://192.168.99.100/phpinfo.php" target="_blank" rel="noopener">http://192.168.99.100/phpinfo.php</a> หากสามารถรันได้ก็หมายความว่าการเชื่อมประตูมิติทั้งสองจุดนั้นได้เสร็จเรียบร้อยแล้วครับ</p>
+<h3>7. Start Container ครั้งต่อๆ ไป</h3>
+<p>ทุกๆ ครั้งที่เราสร้าง containerใหม่ขึ้นมาด้วยการรันคำสั่ง <code>docker run</code> พวก option ต่างๆ ที่เราใส่ไว้นั้น มันจะผูกติดกับตัว container เลยนะครับ เวลาจะรันครั้งต่อไป เราก็สามารถใช้ command สั้นๆ แบบนี้ได้เลย</p>
+<div id="crayon-5b2993f053112205142758" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f053112205142758-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-e">start </span><span class="crayon-v">php5</span><span class="crayon-sy">.</span><span class="crayon-cn">6</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>จะเห็นว่าเราไม่ต้องมาพิมพ์ command ยาวๆ อีกแล้วนะครับ ลองนึกดูเล่นๆ ว่าถ้าเราโหลด PHP มาหลายๆ เวอร์ชั่น การจะสลับเวอร์ชั่นนั้นก็แค่ stop เวอร์ชั่นที่รันอยู่ก่อน แล้วค่อย start เวอร์ชั่นที่ต้องการจะใช้เท่านั้นเอง</p>
+<h3>8. สร้าง Docker image เอง</h3>
+<p>หากเราอยากจะสร้าง Docker image ขึ้นมาใช้เอง ก็ไม่ยากครับ ให้เรา SSH เข้า Docker Machine ก่อน แล้วก็สร้างไฟล์ขึ้นมาอันนึงโดยใช้ชื่อว่า <code>Dockerfile</code> จากนั้นก็ใส่ command ของ Linux ที่ต้องการจะรันลงไปในไฟล์นี้ เมื่อเรียบร้อยแล้วให้เราเข้าไปที่ folder ที่เก็บ <code>Dockerfile</code> อยู่ แล้วรันคำสั่ง build ตามนี้ครับ</p>
+<div id="crayon-5b2993f053117524727811" class="crayon-syntax crayon-theme-dark crayon-font-monaco crayon-os-pc print-yes notranslate">
+<div class="crayon-plain-wrap"></div>
+<div class="crayon-main">
+<table class="crayon-table"><tbody><tr class="crayon-row"><td class="crayon-nums ">
+<div class="crayon-nums-content">
+<div class="crayon-num">1</div>
+</div>
+</td>
+<td class="crayon-code">
+<div class="crayon-pre">
+<div id="crayon-5b2993f053117524727811-1" class="crayon-line"><span class="crayon-e">docker </span><span class="crayon-v">build</span> <span class="crayon-o">–</span><span class="crayon-i">t</span> <span class="crayon-i">myImage</span> <span class="crayon-sy">.</span></div>
+</div>
+</td>
+</tr></tbody></table></div>
+</div>
+<p>เพียงเท่านี้ เราก็จะได้ Docker image ที่ชื่อ <code>myImage</code> มาใช้งานแล้วล่ะครับ รายละเอียดเพิ่มเติมเพื่อนๆ สามารถเข้าไปดูได้ที่<a title="Build your own image" href="http://docs.docker.com/mac/step_four/" target="_blank" rel="noopener">เว็บหลัก</a>ครับ</p>
+<div id="attachment_9667" class="wp-caption aligncenter">
+<p><a href="http://www.siamhtml.com/wp-content/uploads/2015/08/Dockerfile.png"><amp-img class="wp-image-9667 size-full amp-wp-enforced-sizes" src="http://www.siamhtml.com/wp-content/uploads/2015/08/Dockerfile.png" alt="เราสามารถดู Dockerfile ของ Image บน Docker Hub ได้ด้วย" width="641" height="628" layout="intrinsic"></amp-img></a></p>
+<p class="wp-caption-text">เราสามารถดู Dockerfile ของ Image บน Docker Hub ได้ด้วย</p>
+</div>
+<h3>9. เอา Docker image ขึ้น Docker Hub</h3>
+<p>สุดท้ายแล้ว เราสามารถแชร์ Docker image ที่เราสร้างไปให้คนอื่นๆ ใช้ได้ด้วยนะครับ ให้เราเข้าไปสมัครเป็นสมาชิกของ Docker Hub ก่อน จากนั้นก็สร้าง repository ขึ้นมา เมื่อ Docker image พร้อมแล้ว เราก็สามารถรัน command สำหรับ push ของ Docker ได้ทันที เพียงเท่านี้ เพื่อนๆ ทั่วโลกก็จะเห็น Docker image ที่เราสร้างไว้แล้วล่ะครับ รายละเอียดในส่วนนี้ สามารถเข้าไปดูได้ที่<a title="Create a Docker Hub account & repository " href="http://docs.docker.com/mac/step_five/" target="_blank" rel="noopener">เว็บหลัก</a>เช่นกันครับ</p>
+<h2>ความรู้สึกหลังใช้ Docker</h2>
+<p>ก็น่าจะเห็นกันแล้วนะครับว่า Docker มันช่วยอะไรเราได้บ้าง อย่าลืมนะครับว่าตัวอย่างที่ผมยกมามันเป็นแค่การลง PHP ซึ่งถือว่าไม่ได้มีอะไรมาก ซึ่งในการใช้งานจริงๆ แล้ว เราอาจจะไปโหลด Laravel แบบ container เดียว พร้อมใช้งานได้ทันที มีทั้ง MongoDB และ Redis มาให้พร้อมเลยก็เป็นได้ เราอาจจะเล่นเว็บ แล้วพอดีไปเห็นคนเค้าใช้ Elasticsearch แล้วอยากลองเล่นมั้ง เราก็สามารถให้ Docker ช่วยติดตั้ง Elasticsearch ได้ด้วยเวลาเพียงไม่กี่นาที ก็ลองไปเล่นกันดูนะครับ แล้วเราจะไม่ได้ยินคำว่า “กว่าจะ setup ระบบเสร็จ ก็หมดไปวันนึงแล้ว”</p>
+</div>
+<p>ที่มา: http://www.siamhtml.com/getting-started-with-docker/</p>
+	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://static.iotech.co.th/category/cloud/" rel="category tag">Cloud Technology</a>	</div>
+
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>iOTech Enterprise</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
