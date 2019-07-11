@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html amp lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>Convert any website to a desktop application for Windows, Mac or Linux. - iOTech Enterprise</title><meta name="description" content="nodejs → download from here nativefier Nativefier is a command line tool that allows you to easily create a desktop application for any web site with succi"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="Convert any website to a desktop application for Windows, Mac or Linux. - iOTech Enterprise"><meta property="og:description" content="nodejs → download from here nativefier Nativefier is a command line tool that allows you to easily create a desktop application for any web site with succi"><meta property="og:url" content="https://static.iotech.co.th/convert-any-website-to-a-desktop-application-for-windows-mac-or-linux/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:section" content="Cloud Technology"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png"><meta property="og:image:width" content="800"><meta property="og:image:height" content="501"><meta property="og:image:alt" content="Convert any website to a desktop application for Windows, Mac or Linux."><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Convert any website to a desktop application for Windows, Mac or Linux. - iOTech Enterprise"><meta name="twitter:description" content="nodejs → download from here nativefier Nativefier is a command line tool that allows you to easily create a desktop application for any web site with succi"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"Convert any website to a desktop application for Windows, Mac or Linux.","description":"nodejs \u2192 download from here nativefier Nativefier is a command line tool that allows you to easily create a desktop application for any web site with succi","datePublished":"2018-06-12T11:40:30+00:00","dateModified":"2018-06-12T11:40:30+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/convert-any-website-to-a-desktop-application-for-windows-mac-or-linux\/"},"author":{"@type":"Person","name":"Apinan Woratrakun"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/06\/1_b2wv4_BfSY_zwoYrzf_HEQ.png","width":800,"height":501}}]</script><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+.amp-wp-unknown-size > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 1200px;
+	}
+
+html {
+	background: #30a0ff;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #30a0ff;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #30a0ff;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #30a0ff;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #30a0ff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://static.iotech.co.th/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #30a0ff;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style></head><body class="">
+
+<header id="top" class="amp-wp-header"><div>
+		<a href="https://static.iotech.co.th/">
+										<amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				iOTech Enterprise			</span>
+		</a>
+
+					</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Convert any website to a desktop application for Windows, Mac or Linux.</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/f490bfe09c337cf731e5d5a26f405349?s=24&r=g" alt="Apinan Woratrakun" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">Apinan Woratrakun</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-12T18:40:30+00:00">
+		1 ปี ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="800" height="501" src="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="" srcset="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png 800w, https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ-300x188.png 300w, https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ-768x481.png 768w" layout="intrinsic"><noscript><img width="800" height="501" src="https://static.iotech.co.th/wp-content/uploads/2018/06/1_b2wv4_BfSY_zwoYrzf_HEQ.png" class="attachment-large size-large wp-post-image" alt="" sizes="(max-width: 800px) 100vw, 800px"></noscript></amp-img></figure><div class="amp-wp-article-content">
+		<section class="section section--body"><div class="section-divider">
+<hr class="section-divider"></div>
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h3 class="graf graf--h3 graf--empty"></h3>
+<figure class="graf graf--figure"><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/800/1*8kdLtwHrIJfYkpa4TW6UpQ.png" width="800" height="241" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*8kdLtwHrIJfYkpa4TW6UpQ.png" width="800" height="241"></noscript></amp-img></figure><ol class="postList"><li class="graf graf--li">nodejs → download from <a class="markup--anchor markup--li-anchor" href="https://nodejs.org" target="_blank" rel="noopener">here</a></li>
+<li class="graf graf--li">nativefier</li>
+</ol><p class="graf graf--p graf--hasDropCapModel graf--hasDropCap"><span class="graf-dropCap">N</span>ativefier is a command line tool that allows you to easily create a desktop application for any web site with succinct and minimal configuration. Apps are wrapped by <a class="markup--anchor markup--p-anchor" href="http://electron.atom.io/" target="_blank" rel="noopener">Electron</a> in an OS executable (.app, .exe, etc.) for use on Windows, OSX and Linux.</p>
+<p class="graf graf--p"><strong class="markup--strong markup--p-strong">Let’s start</strong>.</p>
+<p class="graf graf--p">Install nativefier module as globally</p>
+<p class="graf graf--p"><em class="markup--em markup--p-em">$ npm install nativefier -g</em></p>
+<p class="graf graf--p">Start convert any website to a destop application suck as .exe, .app, etc…</p>
+<p class="graf graf--p"><em class="markup--em markup--p-em">$ nativefier — name “Facebook” “https://www.facebook.com”</em></p>
+<p class="graf graf--p">Optional</p>
+<ul class="postList"><li class="graf graf--li">— <strong class="markup--strong markup--li-strong">name </strong><em class="markup--em markup--li-em"><</em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">value</em></strong><em class="markup--em markup--li-em">></em> is output name for the application.</li>
+<li class="graf graf--li">— <strong class="markup--strong markup--li-strong">flash </strong>to enable flash in your application explorer.</li>
+<li class="graf graf--li">— <strong class="markup--strong markup--li-strong">version </strong>is prints the version of your nativefier install.</li>
+<li class="graf graf--li">— <strong class="markup--strong markup--li-strong">platform </strong><em class="markup--em markup--li-em"><</em><strong class="markup--strong markup--li-strong"><em class="markup--em markup--li-em">value</em></strong><em class="markup--em markup--li-em">></em> Automatically determined based on the current OS. Can be overwritten by specifying either linux, windows, or osx. The alternative values win32 (for Windows) or darwin, mac (for OSX) can also be used.</li>
+</ul><p class="graf graf--p">Other api document can read more from here <a class="markup--anchor markup--p-anchor" href="https://github.com/jiahaog/nativefier/blob/master/docs/api.md" target="_blank" rel="nofollow noopener noopener">https://github.com/jiahaog/nativefier/blob/master/docs/api.md</a></p>
+<figure class="graf graf--figure"><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/800/1*YUfdiT9i8IH0_8Eyl13DWA.jpeg" width="756" height="464" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*YUfdiT9i8IH0_8Eyl13DWA.jpeg" width="756" height="464"></noscript></amp-img><figcaption class="imageCaption">nativefier command line.</figcaption></figure><figure class="graf graf--figure"><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/800/1*umvdEz8Zpk9Ae1xWI8qfGA.png" width="800" height="421" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*umvdEz8Zpk9Ae1xWI8qfGA.png" width="800" height="421"></noscript></amp-img><figcaption class="imageCaption">Facebook App was converted to a desktop exe file.</figcaption></figure><p class="graf graf--p">Output application.</p>
+<figure class="graf graf--figure"><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/800/1*b2wv4_BfSY_zwoYrzf_HEQ.png" width="800" height="501" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*b2wv4_BfSY_zwoYrzf_HEQ.png" width="800" height="501"></noscript></amp-img></figure></div>
+</div>
+</section><section class="section section--body"><div class="section-divider">
+<hr class="section-divider"></div>
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<p class="graf graf--p"><strong class="markup--strong markup--p-strong">Note.</strong></p>
+<p class="graf graf--p"><strong class="markup--strong markup--p-strong">For Windows Users:</strong> Take note that the application menu is automatically hidden by default, you can press alt on your keyboard to access it.</p>
+<p class="graf graf--p"><strong class="markup--strong markup--p-strong">For Linux Users:</strong> Do not put spaces if you define the app name yourself with — name, as this will cause problems (tested on Ubuntu 14.04) when pinning a packaged app to the launcher.</p>
+</div>
+</div>
+</section></div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://static.iotech.co.th/category/cloud/" rel="category tag">Cloud Technology</a>	</div>
+
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>iOTech Enterprise</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
