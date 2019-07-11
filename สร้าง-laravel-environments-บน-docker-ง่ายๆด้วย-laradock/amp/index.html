@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html amp lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>สร้าง Laravel Environments บน Docker ง่ายๆด้วย Laradock - iOTech Enterprise</title><meta name="description" content="หลายๆคนอาจจะประสบปัญหากับเรื่อง set environments ซึ่ง Laravel ก็มี Homestead แล้ว แต่อยากลองมาใช้ docker ดูบ้าง แต่ก็ขี้เกียจไปตั้งค่าให้วุ่นวาย ซึ่งบทความ"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="สร้าง Laravel Environments บน Docker ง่ายๆด้วย Laradock - iOTech Enterprise"><meta property="og:description" content="หลายๆคนอาจจะประสบปัญหากับเรื่อง set environments ซึ่ง Laravel ก็มี Homestead แล้ว แต่อยากลองมาใช้ docker ดูบ้าง แต่ก็ขี้เกียจไปตั้งค่าให้วุ่นวาย ซึ่งบทความ"><meta property="og:url" content="https://static.iotech.co.th/%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-laravel-environments-%e0%b8%9a%e0%b8%99-docker-%e0%b8%87%e0%b9%88%e0%b8%b2%e0%b8%a2%e0%b9%86%e0%b8%94%e0%b9%89%e0%b8%a7%e0%b8%a2-laradock/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:tag" content="docker"><meta property="article:tag" content="Laradock"><meta property="article:tag" content="Laravel"><meta property="article:section" content="Cloud Technology"><meta property="og:updated_time" content="2019-01-22T19:04:40+00:00"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png"><meta property="og:image:width" content="728"><meta property="og:image:height" content="425"><meta property="og:image:alt" content="สร้าง Laravel Environments บน Docker ง่ายๆด้วย Laradock"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="สร้าง Laravel Environments บน Docker ง่ายๆด้วย Laradock - iOTech Enterprise"><meta name="twitter:description" content="หลายๆคนอาจจะประสบปัญหากับเรื่อง set environments ซึ่ง Laravel ก็มี Homestead แล้ว แต่อยากลองมาใช้ docker ดูบ้าง แต่ก็ขี้เกียจไปตั้งค่าให้วุ่นวาย ซึ่งบทความ"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"\u0e2a\u0e23\u0e49\u0e32\u0e07 Laravel Environments \u0e1a\u0e19 Docker \u0e07\u0e48\u0e32\u0e22\u0e46\u0e14\u0e49\u0e27\u0e22 Laradock","description":"\u0e2b\u0e25\u0e32\u0e22\u0e46\u0e04\u0e19\u0e2d\u0e32\u0e08\u0e08\u0e30\u0e1b\u0e23\u0e30\u0e2a\u0e1a\u0e1b\u0e31\u0e0d\u0e2b\u0e32\u0e01\u0e31\u0e1a\u0e40\u0e23\u0e37\u0e48\u0e2d\u0e07 set environments \u0e0b\u0e36\u0e48\u0e07 Laravel \u0e01\u0e47\u0e21\u0e35 Homestead \u0e41\u0e25\u0e49\u0e27 \u0e41\u0e15\u0e48\u0e2d\u0e22\u0e32\u0e01\u0e25\u0e2d\u0e07\u0e21\u0e32\u0e43\u0e0a\u0e49 docker \u0e14\u0e39\u0e1a\u0e49\u0e32\u0e07 \u0e41\u0e15\u0e48\u0e01\u0e47\u0e02\u0e35\u0e49\u0e40\u0e01\u0e35\u0e22\u0e08\u0e44\u0e1b\u0e15\u0e31\u0e49\u0e07\u0e04\u0e48\u0e32\u0e43\u0e2b\u0e49\u0e27\u0e38\u0e48\u0e19\u0e27\u0e32\u0e22 \u0e0b\u0e36\u0e48\u0e07\u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21","datePublished":"2018-06-12T11:44:18+00:00","dateModified":"2019-01-22T19:04:40+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-laravel-environments-%e0%b8%9a%e0%b8%99-docker-%e0%b8%87%e0%b9%88%e0%b8%b2%e0%b8%a2%e0%b9%86%e0%b8%94%e0%b9%89%e0%b8%a7%e0%b8%a2-laradock\/"},"author":{"@type":"Person","name":"monopeelz"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/06\/laravel_docker_blog.png","width":728,"height":425}}]</script><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+.amp-wp-unknown-size > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 1200px;
+	}
+
+html {
+	background: #30a0ff;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #30a0ff;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #30a0ff;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #30a0ff;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #30a0ff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://static.iotech.co.th/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #30a0ff;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style></head><body class="">
+
+<header id="top" class="amp-wp-header"><div>
+		<a href="https://static.iotech.co.th/">
+										<amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				iOTech Enterprise			</span>
+		</a>
+
+					</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">สร้าง Laravel Environments บน Docker ง่ายๆด้วย Laradock</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/3dfc673d874e49414ab90862b1375127?s=24&r=g" alt="monopeelz" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">monopeelz</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-12T18:44:18+00:00">
+		1 ปี ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="728" height="425" src="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="" srcset="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png 728w, https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog-300x175.png 300w" layout="intrinsic"><noscript><img width="728" height="425" src="https://static.iotech.co.th/wp-content/uploads/2018/06/laravel_docker_blog.png" class="attachment-large size-large wp-post-image" alt="" sizes="(max-width: 728px) 100vw, 728px"></noscript></amp-img></figure><div class="amp-wp-article-content">
+		<p id="7341" class="graf graf--p graf-after--h3">หลายๆคนอาจจะประสบปัญหากับเรื่อง set environments ซึ่ง Laravel ก็มี Homestead แล้ว แต่อยากลองมาใช้ docker ดูบ้าง แต่ก็ขี้เกียจไปตั้งค่าให้วุ่นวาย ซึ่งบทความนี้ผมจะแนะนำอีกหนึ่งหนทาง สำหรับคนที่อยากได้อะไรไวๆเหมือน กับการต้มมาม่า แค่ แกะซอง เทน้ำร้อน รอ และก็กินได้เลย</p>
+<h2 id="797b" class="graf graf--h3 graf-after--p">Laradock คืออะไร</h2>
+<p id="515b" class="graf graf--p graf-after--h3">ก็คือการรวม docker image ที่จำเป็นในการสร้างโปรเจค Laravel ไว้ด้วยกัน เพื่อแก้ปัญหาเรื่องการ set up environments ทำให้ Dev ไม่ต้องปวดหัวกับการตั้งค่าหรือติดตั้ง environments</p>
+<h3 id="63cc" class="graf graf--h3 graf-after--p"><strong class="markup--strong markup--h3-strong">Prepare installation</strong></h3>
+<p id="c1a0" class="graf graf--p graf-after--h3">เตรียมความพร้อมก่อนเริ่ม</p>
+<p id="6c42" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">git</strong> — <a class="markup--anchor markup--p-anchor" href="https://git-scm.com/downloads" target="_blank" rel="nofollow noopener">https://git-scm.com/downloads</a></p>
+<p id="f8c3" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">docker</strong> — <a class="markup--anchor markup--p-anchor" href="https://www.docker.com/get-docker" target="_blank" rel="nofollow noopener">https://www.docker.com/get-docker</a></p>
+<p id="06b0" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">docker-compose</strong> — <a class="markup--anchor markup--p-anchor" href="https://docs.docker.com/compose/install/#install-compose" target="_blank" rel="nofollow noopener">https://docs.docker.com/compose/install/#install-compose</a></p>
+<h3 id="b1ad" class="graf graf--h3 graf-after--p">1. สร้าง Project Directory</h3>
+<figure id="9f10" class="graf graf--figure graf-after--h3"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*fzCgxdRCrmZWtb0v" width="600" height="74" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*fzCgxdRCrmZWtb0v" width="600" height="74"></noscript></amp-img></div>
+</div>
+</figure><p id="bcd1" class="graf graf--p graf-after--figure">clone Laravel มาจาก github กรณีที่ไม่อยากลง composer บนเครื่อง</p>
+<pre class="graf graf--blockquote graf-after--p">git clone</pre>
+<p><a class="markup--anchor markup--blockquote-anchor" href="https://github.com/laravel/laravel.git" target="_blank" rel="nofollow noopener">https://github.com/laravel/laravel.git</a></p>
+<pre id="da1f" class="graf graf--blockquote graf-after--p"> ./</pre>
+<p id="5cfb" class="graf graf--p graf-after--blockquote">หรือถ้ามี composer ก็สามารถสร้างโปรเจคตามปกติ</p>
+<pre id="5c54" class="graf graf--blockquote graf-after--p">composer create-project laravel/laravel</pre>
+<p id="0663" class="graf graf--p graf-after--blockquote">จากนั้นก็ clone laradock มาไว้ใน directory อีกที</p>
+<pre class="graf graf--blockquote graf-after--p">git clone</pre>
+<p><a class="markup--anchor markup--blockquote-anchor" href="https://github.com/Laradock/laradock.git" target="_blank" rel="nofollow noopener">https://github.com/Laradock/laradock.git</a></p>
+<figure id="b45d" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*1orlF19R97aOclsw" width="600" height="92" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*1orlF19R97aOclsw" width="600" height="92"></noscript></amp-img></div>
+</div>
+</figure><figure id="5c1d" class="graf graf--figure graf-after--figure"><div class="aspectRatioPlaceholder is-locked">
+<div class="aspectRatioPlaceholder-fill"></div>
+<p><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*s9V89FExE5bVpU8i" width="582" height="33" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/600/0*s9V89FExE5bVpU8i" width="582" height="33"></noscript></amp-img></p>
+</div><figcaption class="imageCaption">จะพบ directory ชื่อ laradock</figcaption></figure><p id="c012" class="graf graf--p graf-after--figure">เข้าไปยัง directory ที่ชื่อว่า laradock จากนั้น ทำการคัดลอก env-example แล้วเปลี่ยนชื่อเป็น .env</p>
+<figure id="1d2a" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<div class="aspectRatioPlaceholder-fill"></div>
+<p><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*zI8nie9vlUJrMqth" width="600" height="15" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/600/0*zI8nie9vlUJrMqth" width="600" height="15"></noscript></amp-img></p>
+</div><figcaption class="imageCaption">ใช้คำสั่ง cp env-example .env</figcaption></figure><h3 id="da9f" class="graf graf--h3 graf-after--figure">2. Docker up !!</h3>
+<p id="1a67" class="graf graf--p graf-after--h3">พิมคำสั่ง</p>
+<p><strong class="markup--strong markup--blockquote-strong">docker-compose up</strong></p>
+<pre id="e733" class="graf graf--blockquote graf-after--p"> -d nginx mariadb workspace</pre>
+<figure id="af3c" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*nv8CmTWDDU5u3PBu" width="600" height="156" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*nv8CmTWDDU5u3PBu" width="600" height="156"></noscript></amp-img></div>
+</div>
+</figure><p id="2407" class="graf graf--p graf-after--figure">จากนั้นรอสักพักใหญ่ๆ ให้ระบบทำการติดตั้งและตั้งค่า environments (เฉพาะแค่ครั้งแรกตอนติดตั้งเท่านั้น)</p>
+<figure id="8d76" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<p><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*TRlgWJRh7RZfokBf" width="435" height="74" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/600/0*TRlgWJRh7RZfokBf" width="435" height="74"></noscript></amp-img></p>
+</div><figcaption class="imageCaption">ถ้าเสร็จแล้วจะขึ้นตัวเขียวๆ</figcaption></figure><p id="9bc8" class="graf graf--p graf-after--figure">ถ้าขึ้นตัวสีแดงๆแบบในภาพหมายความว่าสร้าง container ไม่สำเร็จ อาจจะเป็นเพราะ port ที่ต้องการใช้มี service อื่นๆ ใช้อยู่ แต่โดยปกติแล้วถ้าไม่ได้เปิด service อะไรไว้ก็จะขึ้นเป็นตัวสีเขียว (กรณีของผมคือผมเป็น contain อีกตัวไว้ แต่ container nginx ที่สร้างใหม่ดันไปใช้ port เดียว ผมจึงต้องไปแก้ port ในไฟล์ laradock/.env ดูข้อมูลเพิ่มเติมได้ในข้อที่ <strong class="markup--strong markup--p-strong">3</strong>)</p>
+<p id="aadd" class="graf graf--p graf-after--p">หากเราต้องการเชคสถานะสามารถทำได้โดย</p>
+<pre id="4452" class="graf graf--blockquote graf-after--p">docker-compose ps หรือ docker ps</pre>
+<figure id="cec4" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*gApU8nmimhjkWNxq" width="600" height="83" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*gApU8nmimhjkWNxq" width="600" height="83"></noscript></amp-img></div>
+</div><figcaption class="imageCaption">คำสั่ง dokcer-compose ps</figcaption></figure><h3 id="4393" class="graf graf--h3 graf-after--figure">3. อธิบายคำสั่ง และ Config เพิ่มเติม</h3>
+<h3 id="c2e5" class="graf graf--h3 graf-after--h3">( ข้ามไป 4ได้เลยนะ )</h3>
+<h3 id="0c27" class="graf graf--h3 graf-after--h3">อธิบายคำสั่ง</h3>
+<p id="ccd6" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">dock-compose up</strong> — ทำการสร้าง docker containner จากไฟล์ docker-compose.yml</p>
+<p id="0fb5" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">-d</strong> — ทำงานเบื้องหลังไม่แสดงข้อความออกมา<br><strong class="markup--strong markup--p-strong">nginx mariadb workspace</strong> — ชื่อ container ที่สร้างไว้ภายในไฟล์ docker-compose.yml</p>
+<p id="7195" class="graf graf--p graf-after--p">หากบางท่านอยากใช้ mysql ก็ให้ใช่ mysql แทน mariadb จะได้ประมาณ</p>
+<p><strong class="markup--strong markup--p-strong">docker-compose up</strong></p>
+<pre class="graf graf--p graf-after--p"> -d nginx</pre>
+<p><strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">mysql</em></strong></p>
+<pre id="8cec" class="graf graf--p graf-after--p"> workspace
+</pre>
+<p>หรืออยากใช้ apche ก็จะได้เป็น</p>
+<p><strong class="markup--strong markup--p-strong">docker-compose</strong></p>
+<pre class="graf graf--p graf-after--p"> up -d</pre>
+<p><strong class="markup--strong markup--p-strong"><em class="markup--em markup--p-em">apache</em></strong></p>
+<pre id="7e2f" class="graf graf--p graf-after--p"> mariadb workspace</pre>
+<h3 id="759d" class="graf graf--h3 graf-after--p">Config เพิ่มเติม</h3>
+<p id="3c2a" class="graf graf--p graf-after--h3">Laradock สามารถ แก้ไข config enviroments ต่างๆได้ภายในไฟล์ laradock/.env<br>
+เช่นผมต้องการเปลี่ยนพอร์ตของ nginx ซึ่งปกติเป็น 80 ให้เป็น 8081 ก็สามารถทำได้ภายในไฟล์นี้เลย</p>
+<figure id="90be" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*T-IYq4VgvO-2N6Nx" width="451" height="140" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*T-IYq4VgvO-2N6Nx" width="451" height="140"></noscript></amp-img></div>
+</div><figcaption class="imageCaption">ตั้งค่า Nginx กรณีที่เปิด service หลาย container</figcaption></figure><h3 id="773e" class="graf graf--h3 graf-after--figure">4. Laravel set up</h3>
+<p id="8e67" class="graf graf--p graf-after--h3">หลังจากที่ปล่อยให้ docker ติดตั้ง container เสร็จแล้ว ลองเข้าไปยังหน้าเว็บจะพบข้อความประมาณนี้</p>
+<p id="4725" class="graf graf--p graf-after--p">จะพบกับ Internal 500 เพราะ เพราะเรายังไม่ได้ติดตั้งแพคเกจ และตั้ง .env ใน laravel</p>
+<figure id="8f4a" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<div class="aspectRatioPlaceholder-fill"></div>
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*FFmNo9j8F-TPeEmY" width="600" height="228" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/0*FFmNo9j8F-TPeEmY" width="600" height="228"></noscript></amp-img></div>
+</div><figcaption class="imageCaption">500 Internal Error</figcaption></figure><p id="6560" class="graf graf--p graf-after--figure">ถ้าหากเราไม่ได้ไปเปลี่ยนค่าอะไรใน laradock/.env เราก็ใส่ค่าตามนี้ได้เลย (เป็นค่าตั้งต้นของ Laradock)</p>
+<p><strong class="markup--strong markup--blockquote-strong"># ไฟล์ .env ของ Laravel </strong></p>
+<pre class="EnlighterJSRAW" data-enlighter-theme="atomic" data-enlighter-language="ini">DB_CONNECTION=mysql
+DB_HOST=mariadb #IP ของ host ถ้าเราใช้ mysql container ก็ใส่ mysql แทน
+DB_PORT=3306
+DB_DATABASE=default
+DB_USERNAME=root
+DB_PASSWORD=root</pre>
+<p id="1ad2" class="graf graf--p graf-after--blockquote">พิมคำสั่ง</p>
+<pre id="2aaf" class="graf graf--blockquote graf-after--p">docker-compose exec — user laradock workspace bash</pre>
+<p id="9536" class="graf graf--p graf-after--blockquote">ตอนนี้เราจะเหมือนเรา ssh ไปยัง docker container ที่ชื่อว่า <em class="markup--em markup--p-em">workspace</em></p>
+<figure id="6fe3" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<p><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/0*n9scdfSEplgyqtLK" width="600" height="22" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/600/0*n9scdfSEplgyqtLK" width="600" height="22"></noscript></amp-img></p>
+</div>
+</figure><p id="2cf5" class="graf graf--p graf-after--figure">ต่อด้วยการติดตั้งแพคเกจต่างของ Laravel ด้วยคำสั่ง</p>
+<pre id="efa6" class="graf graf--blockquote graf-after--p">composer update</pre>
+<figure id="c58d" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/1*Q3DbxZsj7TgtMjIKowCOvw.png" width="549" height="196" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/1*Q3DbxZsj7TgtMjIKowCOvw.png" width="549" height="196"></noscript></amp-img></div>
+</div>
+</figure><p id="8aee" class="graf graf--p graf-after--figure">จากนั้นก็รอ (อีกแล้ว)</p>
+<p id="8ea5" class="graf graf--p graf-after--p">หลังจากที่ composer ติดตั้งเสร็จแล้วก็พิมพ์</p>
+<pre id="a32d" class="graf graf--blockquote graf-after--p">php artisan key:generate</pre>
+<p id="b6a3" class="graf graf--p graf-after--blockquote">ลองกลับไปดูที่หน้าเว็บอีกที</p>
+<figure id="1185" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><amp-img class="progressiveMedia-image js-progressiveMedia-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/1*-TpZhr106HrhSYvBai8CIQ.png" width="600" height="311" layout="intrinsic"><noscript><img class="progressiveMedia-image js-progressiveMedia-image" src="https://cdn-images-1.medium.com/max/600/1*-TpZhr106HrhSYvBai8CIQ.png" width="600" height="311"></noscript></amp-img></div>
+</div>
+</figure><p id="7ae8" class="graf graf--p graf-after--figure">ก็จะพอหน้าขาวๆแบบในภาพ</p>
+<p id="94f5" class="graf graf--p graf-after--p">ลองสั่ง</p>
+<pre id="ef07" class="graf graf--blockquote graf-after--p">php artisan migrate</pre>
+<figure id="f411" class="graf graf--figure graf-after--blockquote"><div class="aspectRatioPlaceholder is-locked">
+<p><amp-img class="graf-image amp-wp-enforced-sizes" src="https://cdn-images-1.medium.com/max/600/1*oDOV-WnmT0CFhzRFUmmZpw.png" width="421" height="96" layout="intrinsic"><noscript><img class="graf-image" src="https://cdn-images-1.medium.com/max/600/1*oDOV-WnmT0CFhzRFUmmZpw.png" width="421" height="96"></noscript></amp-img></p>
+</div>
+</figure><p id="f620" class="graf graf--p graf-after--figure">เป็นอันเสร็จสิ้นการติดตั้ง Laradock และ Laravel ครับ</p>
+<p id="8b86" class="graf graf--p graf-after--p">สามารถอ่านข้อมูลเพิ่มเติมได้ที่ <a class="markup--anchor markup--p-anchor" href="http://laradock.io/" target="_blank" rel="nofollow noopener">Laradock.io</a></p>
+<h3 id="afa6" class="graf graf--h3 graf-after--p graf--trailing">Have fun with coding 😀</h3>
+	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://static.iotech.co.th/category/cloud/" rel="category tag">Cloud Technology</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://static.iotech.co.th/tag/docker/" rel="tag">docker</a>, <a href="https://static.iotech.co.th/tag/laradock/" rel="tag">Laradock</a>, <a href="https://static.iotech.co.th/tag/laravel/" rel="tag">Laravel</a>	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>iOTech Enterprise</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
