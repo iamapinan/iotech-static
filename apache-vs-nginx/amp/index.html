@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html amp lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>Apache vs Nginx - iOTech Enterprise</title><meta name="description" content="เว็บเซิร์ฟเวอร์ Apache vs Nginx หลังๆ มานี้เว็บเซิร์ฟเวอร์ Nginx เริ่มได้รับความนิยมมากขึ้นเรื่อยๆ (และเห็นบทความ Apache vs Nginx ออกมาเรื่อยๆ) เนื่องมาจาก"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="Apache vs Nginx - iOTech Enterprise"><meta property="og:description" content="เว็บเซิร์ฟเวอร์ Apache vs Nginx หลังๆ มานี้เว็บเซิร์ฟเวอร์ Nginx เริ่มได้รับความนิยมมากขึ้นเรื่อยๆ (และเห็นบทความ Apache vs Nginx ออกมาเรื่อยๆ) เนื่องมาจาก"><meta property="og:url" content="https://static.iotech.co.th/apache-vs-nginx/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:section" content="Web Development"><meta property="og:updated_time" content="2018-07-19T09:31:24+00:00"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png"><meta property="og:image:width" content="745"><meta property="og:image:height" content="496"><meta property="og:image:alt" content="Apache vs Nginx"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Apache vs Nginx - iOTech Enterprise"><meta name="twitter:description" content="เว็บเซิร์ฟเวอร์ Apache vs Nginx หลังๆ มานี้เว็บเซิร์ฟเวอร์ Nginx เริ่มได้รับความนิยมมากขึ้นเรื่อยๆ (และเห็นบทความ Apache vs Nginx ออกมาเรื่อยๆ) เนื่องมาจาก"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"Apache vs Nginx","description":"\u0e40\u0e27\u0e47\u0e1a\u0e40\u0e0b\u0e34\u0e23\u0e4c\u0e1f\u0e40\u0e27\u0e2d\u0e23\u0e4c Apache vs Nginx \u0e2b\u0e25\u0e31\u0e07\u0e46 \u0e21\u0e32\u0e19\u0e35\u0e49\u0e40\u0e27\u0e47\u0e1a\u0e40\u0e0b\u0e34\u0e23\u0e4c\u0e1f\u0e40\u0e27\u0e2d\u0e23\u0e4c Nginx \u0e40\u0e23\u0e34\u0e48\u0e21\u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e19\u0e34\u0e22\u0e21\u0e21\u0e32\u0e01\u0e02\u0e36\u0e49\u0e19\u0e40\u0e23\u0e37\u0e48\u0e2d\u0e22\u0e46 (\u0e41\u0e25\u0e30\u0e40\u0e2b\u0e47\u0e19\u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21 Apache vs Nginx \u0e2d\u0e2d\u0e01\u0e21\u0e32\u0e40\u0e23\u0e37\u0e48\u0e2d\u0e22\u0e46) \u0e40\u0e19\u0e37\u0e48\u0e2d\u0e07\u0e21\u0e32\u0e08\u0e32\u0e01","datePublished":"2018-06-20T13:30:20+00:00","dateModified":"2018-07-19T09:31:24+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/apache-vs-nginx\/"},"author":{"@type":"Person","name":"monopeelz"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/06\/nginx-vs-apache.png","width":745,"height":496}}]</script><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+.amp-wp-unknown-size > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 1200px;
+	}
+
+html {
+	background: #30a0ff;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #30a0ff;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #30a0ff;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #30a0ff;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #30a0ff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://static.iotech.co.th/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #30a0ff;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style></head><body class="">
+
+<header id="top" class="amp-wp-header"><div>
+		<a href="https://static.iotech.co.th/">
+										<amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				iOTech Enterprise			</span>
+		</a>
+
+					</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Apache vs Nginx</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/3dfc673d874e49414ab90862b1375127?s=24&r=g" alt="monopeelz" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">monopeelz</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-20T20:30:20+00:00">
+		1 ปี ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="745" height="496" src="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="" srcset="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png 745w, https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache-300x200.png 300w" layout="intrinsic"><noscript><img width="745" height="496" src="https://static.iotech.co.th/wp-content/uploads/2018/06/nginx-vs-apache.png" class="attachment-large size-large wp-post-image" alt="" sizes="(max-width: 745px) 100vw, 745px"></noscript></amp-img></figure><div class="amp-wp-article-content">
+		<h2 class="post-thumbnail"><amp-img class="attachment-post-cover size-post-cover wp-post-image amp-wp-enforced-sizes" src="https://jirayu.in.th/wp-content/uploads/2015/11/Untitled-1.jpg" alt="" width="750" height="280" layout="intrinsic"><noscript><img class="attachment-post-cover size-post-cover wp-post-image" src="https://jirayu.in.th/wp-content/uploads/2015/11/Untitled-1.jpg" alt="" width="750" height="280"></noscript></amp-img>เว็บเซิร์ฟเวอร์ Apache vs Nginx</h2>
+<section class="content">หลังๆ มานี้เว็บเซิร์ฟเวอร์ Nginx เริ่มได้รับความนิยมมากขึ้นเรื่อยๆ (และเห็นบทความ Apache vs Nginx ออกมาเรื่อยๆ) เนื่องมาจากความเร็วและการที่มันสามารถรับการเชื่อมต่อจำนวนมหาศาลได้เป็นอย่างดี  ดังนั้นในบางสถานการณ์เราคงเริ่มตั้งคำถามกันแล้วว่าจะเลือกใช้ Apache หรือ Nginx ในการทำเว็บไซต์ดี?
+<h3>Apache vs Nginx</h3>
+<p>Apache นั้นครองตลาดมาก่อน  โดยเริ่มพัฒนาตั้งแต่ในปี 1995 ทำให้มีเอกสารและชุมชนขนาดใหญ่มากที่คอยช่วยเหลือเวลาเกิดปัญหา  รวมทั้งเว็บไซต์และ CMS จำนวนมากออกแบบมาโดยอิงกับ Apache เป็นหลัก</p>
+<p>ในปี 2002 นั้น Nginx ได้ถือกำเนิดขึ้นมา  โดยมีเป้าหมายในการแก้ไขปัญหาการเชื่อมต่อพร้อมกันจำนวนมากๆ (หลักหมื่นคอนเคอร์เรนท์) ซึ่งเริ่มมีปัญหาขึ้นเนื่องจากการเติบโตของอินเตอร์เน็ต</p>
+<h3>การจัดการการเชื่อมต่อของ Apache และ Nginx</h3>
+<p>วิธีจัดการการเชื่อมต่อถือเป็นจุดต่างสำคัญของ Apache และ Nginx และเป็นเหตุที่ทำให้ Nginx สามารถรับคอนเคอร์เรนท์สูงๆ ได้ดีกว่า Apache</p>
+<p>Apache บน Linux จะมีวิธีจัดการการเชื่อมต่ออยู่ 3 แบบด้วยกัน โดยปกติ Apache จะเลือกขึ้นมาโดยอัตโนมัติ  ขึ้นอยู่กับว่าเซิร์ฟเวอร์รองรับหรือไม่</p>
+<ol><li><strong>mpm_prefork</strong> จะเป็นการสร้างโพรเซสแบบ 1 Thread ต่อ 1 Process ขึ้นมาเพื่อรองรับการเชื่อมต่อ  วิธีนี้ทำให้ Apache สามารถทำงานได้เร็วมากถ้าหากว่ามีการเชื่อมต่อจำนวนน้อย  แต่จะเริ่มมีปัญหาขึ้นมาทันทีถ้าหากว่าต้องรับกับการเชื่อมต่อจำนวนมาก  เช่นการสูบแรมจำนวนมากจากการสร้างโพรเซสย่อยขึ้นมา  หรือการที่การเชื่อมต่อจะต้องรอโพรเซสที่ว่าง  จึงจะทำงานได้อย่างไรก็ตาม mpm_prefork ยังมีข้อดีบางอย่างของมันอยู่  เช่นเมื่อถ้าทำงานร่วมกับส่วนเสริมอื่นที่ไม่ได้ออกแบบมาเป็น thread safe (เช่น mod_php) ซึ่งคือหากส่วนเสริมนั้นเกิดค้างหรือแครชลงไป  มันจะดับไปแค่โพรเซสนั้นๆ เพียงโพรเซสเดียว  ไม่ไปกวนการทำงานกับโพรเซสอื่น</li>
+<li><strong>mpm_worker</strong> จะเป็นการสร้างโพรเซสแบบหลาย Threads ต่อ 1 Process ขึ้นมา  โดยแต่ละ Thread จะจัดการกับ 1 การเชื่อมต่อ  ทำให้การเชื่อมต่อสามารถโดดเข้ามาทำงานใน Thread ที่ว่างได้ทันที  โดยไม่ต้องรอให้โพรเซสว่างก่อน</li>
+<li><strong>mpm_event</strong> การทำงานของมันจะเหมือนกับ mpm_worker ทุกประการ  แต่จะต่างกันในส่วนการจัดการการเชื่อมต่อแบบ keep-alive ที่โดยปกติถ้าใช้ mpm_worker ถ้าหากการเชื่อมต่อเข้ามาเป็นแบบ keep-alive การเชื่อมต่อนั้นจะจอง Thread ทิ้งไว้จนกว่าการเชื่อมต่อจะปิดลงmpm_event เข้ามาแก้ไขปัญหาตรงนี้  โดยการสร้าง Thread เฉพาะสำหรับจัดการกับการเชื่อมต่อแบบ keep-alive ขึ้นมา  และโยนการเชื่อมต่อแบบ keep-alive มาไว้ที่ Thread นี้ (mpm_event เพิ่ง stable ใน Apache 2.4)</li>
+</ol><p>สำหรับบน Nginx นั้นการทำงานจะคล้ายกับ mpm_event ใน Apache โดย Nginx จะสร้าง Thread ย่อยขึ้นมาเพื่อรับการเชื่อมต่อจำนวนมากๆ โดย Nginx จะกองการเชื่อมต่อต่างๆ เอาไว้ในที่เดียว  และทำงานแบบ non-blocking (คล้ายๆ กับเวลาเราเขียน Node.js) คือเมื่อมันจัดการงานหนึ่งแล้ว  มันจะโดดไปทำงานต่อไปทันทีโดยไม่รอให้งานก่อนหน้านี้ประมวลผลเสร็จก่อน  แล้วค่อยกลับมาทำต่ออีกครั้งเมื่อประมวลผลเสร็จแล้ว</p>
+<p>การทำงานแบบนี้ทำให้ Nginx สามารถใช้ทรัพยากรได้คุ้มค่ามากกว่า  และจะเห็นผลชัดมากหากอยู่บนเซิร์ฟเวอร์ที่มีทรัพยากรค่อนข้างจำกัดจำเขี่ย</p>
+<h3>โมดูลเสริม</h3>
+<p>ทั้ง Apache และ Nginx นั้นรองรับการติดตั้งโมดูลเสริมเพื่อเพิ่มความสามารถต่างๆ ให้กับมัน  โดยของ Apache นั้นตัวโมดูลจะแยกกับแกนหลักของ Apache สามารถเลือกเปิดหรือปิดการทำงานของโมดูลได้ตลอดเวลา</p>
+<p>แต่ในกรณีของ Nginx นั้นโมดูลต่างๆ จะถูกคอมไพล์รวมเข้าไปกับตัวแกนหลักด้วย  ดังนั้นถ้าหากต้องการลดหรือเพิ่มโมดูลให้กับ Nginx ผู้ใช้จำเป็นต้องคอมไพล์ Nginx ใหม่ทุกครั้ง</p>
+<h3>การทำงานร่วมกับเนื้อหาแบบ Dynamic</h3>
+<p>ในกรณีนี้จะขอยกตัวอย่างเป็น PHP นะครับ  ซึ่งโดยปกติแล้วทั้ง Apache และ Nginx โดยตัวของมันมีหน้าที่สำหรับส่งเนื้อหามายังไคลเอ็นท์เท่านั้น  ตัวมันเองไม่สามารถประมวลผลโค๊ดภาษาต่างๆ (เช่น PHP) ได้เลย</p>
+<p>ทางฝั่ง Apache นั้นใช้ประโยชน์จากระบบโหลดโมดูลแบบไดนามิคในการโหลดโมดูล PHP เข้ามาทำงานใน Apache ได้ในทันที  ในขณะที่ Nginx นั้น PHP จะทำงานผ่านโมดูล FastCGI อีกทีหนึ่ง  ซึ่งจะได้ Performance ที่ช้ากว่า mod_php ของ Apache ที่ทำงานแบบ Native</p>
+<p>จริงๆ แล้วถ้าเราถึกพอ  ผมว่าเราน่าจะสามารถเขียนโมดูล PHP ให้ Nginx ได้เช่นกัน  แต่ว่าทุกครั้งที่เราจะอัพเดท PHP เราจะต้องคอมไพล์ Nginx ใหม่ทุกครั้ง  เทียบกับ Apache ที่เราสามารถอัพเดท PHP แยกได้ทันที</p>
+<h3>การตั้งค่าการทำงาน</h3>
+<p>รูปแบบการตั้งค่าการทำงานของ Apache และ Nginx ถือเป็นอีกปัจจัยหนึ่งที่ทำให้เว็บเซิร์ฟเวอร์ทั้งสองตัวมีความเร็วต่างกันอย่างเห็นได้ชัด</p>
+<p>ใน Apache เราคงคุ้นเคยกันดีกับไฟล์ .htaccess ที่สามารถเอาไปโยนแปะในไดเรคทอรี่ต่างๆ ที่ต้องการ  ซึ่งการที่ Apache รองรับไฟล์ .htaccess แบบนี้  ทำให้มันจะต้องสแกนไดเรคทอรี่ทั้งหมดเพื่อหาไฟล์ .htaccess และประมวลผลการตั้งค่าต่างๆ ก่อนที่จะเริ่มทำงานของมันจริงๆ  ทำให้ Apache นั้นต้องทำงานหนักขึ้นและกินทรัพยากรมากขึ้นนั่นเอง</p>
+<p>ในขณะที่ Nginx นั้นจะกองการตั้งค่าทั้งหมดเอาไว้ในไฟล์เดียว  ทำให้มันไม่จำเป็นต้องสแกนไดเรคทอรี่ทั้งหมดเพื่อประมวลผลการตั้งค่า  จึงส่งผลให้ Nginx สามารถเอาทรัพยากรที่มีมาจัดการกับงานได้ดีกว่านั่นเอง  และในอีกมุม</p>
+<p>อย่างไรก็ตามใน Apache สามารถปิดการทำงานของ .htaccess ได้เช่นกัน  โดยการสั่ง AllowOverride None ในไฟล์ vhost (ผมก็ใช้วิธีนี้  ปิด AllowOverride และไปตั้ง Rewrite Rule ลงในไฟล์ vhost โดยตรง)</p>
+<h3>ทางออกยอดนิยม: ใช้ทั้งคู่ผสมกัน</h3>
+<p>ทั้ง Apache และ Nginx นั้นมีข้อดีและข้อเสียต่างกันไป  ดังนั้นทางออกยอดนิยมที่หลายคนมักจะเลือกกันก็คือนำทั้งตัวมาใช้งานร่วมกันเสียเลย  โดยใช้ข้อดีของ Nginx คือรับการเชื่อมต่อจำนวนมากได้ดี  มาทำหน้าที่เป็น Reverse Proxy คอยรับการเชื่อมต่อทั้งหมดจาก Client โดยเมื่อพบว่า Client เรียกหา Static Content ก็จะจัดการส่งเนื้อหานั้นๆ ไปให้ Client โดยตรง  หรือหากเป็นการเรียกหา Dynamic Content (เช่น PHP) ก็จะส่งต่อไปให้ Apache ประมวลผล (เพราะ Apache สามารถประมวลผล PHP ได้เร็วกว่าผ่าน mod_php) และส่งผลลัพธ์กลับมา Nginx ก่อนจะส่งกลับ Client ต่อไป</p>
+<h3>สรุปส่งท้าย</h3>
+<p>ทั้ง Apache และ Nginx ล้วนเป็นเว็บเซิร์ฟเวอร์ที่มีความสามารถสูงทั้งคู่  คำถามว่า Apache vs Nginx นั้นใช้อะไรดีกว่ากันก็คงยังหาคำตอบที่แน่นอนไม่ได้ต่อไป  ดังนั้นแล้วการจะเลือกเว็บเซิร์ฟเวอร์สักตัว  เราควรจะเลือกจากว่างานของเรานั้นต้องการความสามารถแบบไหน  จะเอามาใช้ตัวใดตัวหนึ่ง  หรือนำมันมาใช้ร่วมกัน</p>
+</section><p>ที่มา: https://jirayu.in.th/2015/11/%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%80%E0%B8%8B%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%9F%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C-apache-vs-nginx/</p>
+	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://static.iotech.co.th/category/web/" rel="category tag">Web Development</a>	</div>
+
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>iOTech Enterprise</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
