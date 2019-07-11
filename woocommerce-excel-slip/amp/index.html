@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html amp lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>Woocommerce Excel Slip - iOTech Enterprise</title><meta name="description" content="Woocommerce Plugin ที่จะช่วยสร้าง Slip ในรูปแบบไฟล์ Excel เพื่อให้สามารถนำข้อมูลใบสั่งซื้อไปใช้ต่อในรูปแบบอื่นได้นอกจากปริ้นต์ออกมา"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="Woocommerce Excel Slip - iOTech Enterprise"><meta property="og:description" content="Woocommerce Plugin ที่จะช่วยสร้าง Slip ในรูปแบบไฟล์ Excel เพื่อให้สามารถนำข้อมูลใบสั่งซื้อไปใช้ต่อในรูปแบบอื่นได้นอกจากปริ้นต์ออกมา"><meta property="og:url" content="https://static.iotech.co.th/woocommerce-excel-slip/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:section" content="Open Source"><meta property="og:updated_time" content="2019-01-24T04:25:31+00:00"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2018/02/Screen-Shot-2561-02-06-at-11.02.03.png"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2018/02/Screen-Shot-2561-02-06-at-11.02.03.png"><meta property="og:image:width" content="260"><meta property="og:image:height" content="288"><meta property="og:image:alt" content="Woocommerce Excel Slip"><meta property="og:image:type" content="image/png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Woocommerce Excel Slip - iOTech Enterprise"><meta name="twitter:description" content="Woocommerce Plugin ที่จะช่วยสร้าง Slip ในรูปแบบไฟล์ Excel เพื่อให้สามารถนำข้อมูลใบสั่งซื้อไปใช้ต่อในรูปแบบอื่นได้นอกจากปริ้นต์ออกมา"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2018/02/Screen-Shot-2561-02-06-at-11.02.03.png"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"Woocommerce Excel Slip","description":"Woocommerce Plugin \u0e17\u0e35\u0e48\u0e08\u0e30\u0e0a\u0e48\u0e27\u0e22\u0e2a\u0e23\u0e49\u0e32\u0e07 Slip \u0e43\u0e19\u0e23\u0e39\u0e1b\u0e41\u0e1a\u0e1a\u0e44\u0e1f\u0e25\u0e4c Excel \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e19\u0e33\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e43\u0e1a\u0e2a\u0e31\u0e48\u0e07\u0e0b\u0e37\u0e49\u0e2d\u0e44\u0e1b\u0e43\u0e0a\u0e49\u0e15\u0e48\u0e2d\u0e43\u0e19\u0e23\u0e39\u0e1b\u0e41\u0e1a\u0e1a\u0e2d\u0e37\u0e48\u0e19\u0e44\u0e14\u0e49\u0e19\u0e2d\u0e01\u0e08\u0e32\u0e01\u0e1b\u0e23\u0e34\u0e49\u0e19\u0e15\u0e4c\u0e2d\u0e2d\u0e01\u0e21\u0e32","datePublished":"2019-01-24T04:25:29+00:00","dateModified":"2019-01-24T04:25:31+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/woocommerce-excel-slip\/"},"author":{"@type":"Person","name":"Apinan Woratrakun"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/Screen-Shot-2561-02-06-at-11.02.03.png","width":260,"height":288}}]</script><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/*
+ * Prevent cases of amp-img converted from img to appear with stretching by using object-fit to scale.
+ * See <https://github.com/ampproject/amphtml/issues/21371#issuecomment-475443219>.
+ * Also use object-fit:contain in worst case scenario when we can't figure out dimensions for an image.
+ */
+amp-img.amp-wp-enforced-sizes[layout="intrinsic"] > img,
+.amp-wp-unknown-size > img {
+	object-fit: contain;
+}
+
+amp-fit-text blockquote,
+amp-fit-text h1,
+amp-fit-text h2,
+amp-fit-text h3,
+amp-fit-text h4,
+amp-fit-text h5,
+amp-fit-text h6 {
+	font-size: inherit;
+}
+
+/**
+ * Override a style rule in Twenty Sixteen and Twenty Seventeen.
+ * It set display:none for audio elements.
+ * This selector is the same, though it adds body and uses amp-audio instead of audio.
+ */
+body amp-audio:not([controls]) {
+	display: inline-block;
+	height: auto;
+}
+
+/*
+ * Style the default template messages for submit-success, submit-error, and submitting. These elements are inserted
+ * by the form sanitizer when a POST form lacks the action-xhr attribute.
+ */
+.amp-wp-default-form-message > p {
+	margin: 1em 0;
+	padding: 0.5em;
+}
+
+.amp-wp-default-form-message[submitting] > p,
+.amp-wp-default-form-message[submit-success] > p.amp-wp-form-redirecting {
+	font-style: italic;
+}
+
+.amp-wp-default-form-message[submit-success] > p:not(.amp-wp-form-redirecting) {
+	border: solid 1px #008000;
+	background-color: #90ee90;
+	color: #000;
+}
+
+.amp-wp-default-form-message[submit-error] > p {
+	border: solid 1px #f00;
+	background-color: #ffb6c1;
+	color: #000;
+}
+
+/* Prevent showing empty success message in the case of an AMP-Redirect-To response header. */
+.amp-wp-default-form-message[submit-success] > p:empty {
+	display: none;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 1200px;
+	}
+
+html {
+	background: #30a0ff;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: Georgia, 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #30a0ff;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #30a0ff;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #30a0ff;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #30a0ff;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content .wp-caption {
+	max-width: 100%;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+.alignwide,
+.alignfull {
+	clear: both;
+}
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://static.iotech.co.th/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #30a0ff;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style></head><body class="">
+
+<header id="top" class="amp-wp-header"><div>
+		<a href="https://static.iotech.co.th/">
+										<amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				iOTech Enterprise			</span>
+		</a>
+
+					</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Woocommerce Excel Slip</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/f490bfe09c337cf731e5d5a26f405349?s=24&r=g" alt="Apinan Woratrakun" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">Apinan Woratrakun</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2019-01-24T11:25:29+00:00">
+		6 เดือน ago	</time></div>
+	</header><div class="amp-wp-article-content">
+		
+<p>Woocommerce Plugin ที่จะช่วยสร้าง Slip ในรูปแบบไฟล์ Excel เพื่อให้สามารถนำข้อมูลใบสั่งซื้อไปใช้ต่อในรูปแบบอื่นได้นอกจากปริ้นต์ออกมา</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><amp-img src="https://static.iotech.co.th/wp-content/uploads/2018/02/Screen-Shot-2561-02-06-at-11.02.03.png" alt="" class="wp-image-1683 amp-wp-enforced-sizes" width="110" height="122" layout="intrinsic"><noscript><img src="https://static.iotech.co.th/wp-content/uploads/2018/02/Screen-Shot-2561-02-06-at-11.02.03.png" alt="" class="wp-image-1683" width="110" height="122"></noscript></amp-img></figure></div>
+
+
+
+<p><strong>Installations</strong></p>
+
+
+
+<p><strong>If you are developer.</strong></p>
+
+
+
+<ul><li>Download the plugin from here and extract plugin file.</li><li>Open terminal on MacOS or Dos on Windows and goto extracted file location.</li><li>Run composer install command to install plugin dependencys.</li><li>After finished install dependency command you need to zip all to wc-excel-slip.zip.</li><li>Go to your WordPress admin area and click on Plugins » Add New.</li><li>Click on the Upload Plugin button on top of the page.</li><li>Click on the choose file button and select the wc-excel-slip.zip file.</li><li>Click on the Install now button.</li><li>Click on the Activate Plugin link to start using the plugin.</li></ul><p><strong>If you are user.</strong></p>
+
+
+
+<ul><li><a href="https://github.com/iotech-thailand/wc-excel-slip/raw/master/files/wc-excel-slip.zip">Download file frome here</a></li><li>Go to your WordPress admin area and click on Plugins » Add New.</li><li>Click on the Upload Plugin button on top of the page.</li><li>Click on the choose file button and select the wc-excel-slip.zip file from your computer.</li><li>Click on the Install now button.</li><li>Click on the Activate Plugin link to start using the plugin.</li></ul><figure class="wp-block-image"><amp-img src="https://camo.githubusercontent.com/5aa4b620cf7e000e5ab38d171ddcd4a595e21ed2/68747470733a2f2f696f746563682e636f2e74682f77702d636f6e74656e742f75706c6f6164732f323031372f30362e34302e33342e706e67" alt="" width="1380" height="1230" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://camo.githubusercontent.com/5aa4b620cf7e000e5ab38d171ddcd4a595e21ed2/68747470733a2f2f696f746563682e636f2e74682f77702d636f6e74656e742f75706c6f6164732f323031372f30362e34302e33342e706e67" alt="" width="1380" height="1230" class=""></noscript></amp-img></figure></div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://static.iotech.co.th/category/opensource/" rel="category tag">Open Source</a>	</div>
+
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>iOTech Enterprise</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
