@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html class="html" lang="th" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage"><head><meta charset="UTF-8"><script src="/cdn-cgi/apps/head/CVD7F2B9CqLY8IxEADf5_LTS3ys.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:type" content="article"><meta property="og:title" content="5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ"><meta property="og:description" content="1. วางแผน 1.1 ศึกษาคู่แข่ง หลังจากได้ไอเ…"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg"><meta property="og:image:width" content="626"><meta property="og:image:height" content="417"><meta property="og:url" content="https://static.iotech.co.th/5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99-%e0%b8%81%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%a7%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2-mobile/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:author" content="https://www.facebook.com/iotechth/"><meta property="article:published_time" content="2019-03-06T12:58:18+00:00"><meta property="article:modified_time" content="2019-03-06T12:58:19+00:00"><meta property="og:updated_time" content="2019-03-06T12:58:19+00:00"><meta property="article:section" content="Mobile Development"><meta property="article:publisher" content="https://www.facebook.com/iotechth/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ"><meta name="twitter:description" content="1. วางแผน 1.1 ศึกษาคู่แข่ง หลังจากได้ไอเ…"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg"><meta name="twitter:site" content="@"><meta name="twitter:creator" content="@"><title>5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ - iOTech Enterprise</title><meta name="description" content="1. วางแผน 1.1 ศึกษาคู่แข่ง หลังจากได้ไอเดียแล้ว เราก็ต้องมาวางแผนกัน เพื่อให้แอปเราประสบความสำเร็จให้ได้ จุดแรกสุดที่เราควรเริ่มคือวิเคราะห์คู่แข่ง หาแอปที"><meta name="robots" content="index,follow"><meta property="og:locale" content="th_TH"><meta property="og:type" content="article"><meta property="og:title" content="5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ - iOTech Enterprise"><meta property="og:description" content="1. วางแผน 1.1 ศึกษาคู่แข่ง หลังจากได้ไอเดียแล้ว เราก็ต้องมาวางแผนกัน เพื่อให้แอปเราประสบความสำเร็จให้ได้ จุดแรกสุดที่เราควรเริ่มคือวิเคราะห์คู่แข่ง หาแอปที"><meta property="og:url" content="https://static.iotech.co.th/5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99-%e0%b8%81%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%a7%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2-mobile/"><meta property="og:site_name" content="iOTech Enterprise"><meta property="article:section" content="Mobile Development"><meta property="og:updated_time" content="2019-03-06T05:58:19+00:00"><meta property="og:image" content="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg"><meta property="og:image:secure_url" content="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg"><meta property="og:image:width" content="626"><meta property="og:image:height" content="417"><meta property="og:image:alt" content="5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ - iOTech Enterprise"><meta name="twitter:description" content="1. วางแผน 1.1 ศึกษาคู่แข่ง หลังจากได้ไอเดียแล้ว เราก็ต้องมาวางแผนกัน เพื่อให้แอปเราประสบความสำเร็จให้ได้ จุดแรกสุดที่เราควรเริ่มคือวิเคราะห์คู่แข่ง หาแอปที"><meta name="twitter:image" content="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg"><script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"5 \u0e02\u0e31\u0e49\u0e19\u0e15\u0e2d\u0e19 \u0e01\u0e23\u0e30\u0e1a\u0e27\u0e19\u0e01\u0e32\u0e23\u0e1e\u0e31\u0e12\u0e19\u0e32 Mobile Application \u0e15\u0e31\u0e49\u0e07\u0e41\u0e15\u0e48\u0e15\u0e49\u0e19\u0e08\u0e19\u0e08\u0e1a","description":"1. \u0e27\u0e32\u0e07\u0e41\u0e1c\u0e19 1.1 \u0e28\u0e36\u0e01\u0e29\u0e32\u0e04\u0e39\u0e48\u0e41\u0e02\u0e48\u0e07 \u0e2b\u0e25\u0e31\u0e07\u0e08\u0e32\u0e01\u0e44\u0e14\u0e49\u0e44\u0e2d\u0e40\u0e14\u0e35\u0e22\u0e41\u0e25\u0e49\u0e27 \u0e40\u0e23\u0e32\u0e01\u0e47\u0e15\u0e49\u0e2d\u0e07\u0e21\u0e32\u0e27\u0e32\u0e07\u0e41\u0e1c\u0e19\u0e01\u0e31\u0e19 \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e41\u0e2d\u0e1b\u0e40\u0e23\u0e32\u0e1b\u0e23\u0e30\u0e2a\u0e1a\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e33\u0e40\u0e23\u0e47\u0e08\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49 \u0e08\u0e38\u0e14\u0e41\u0e23\u0e01\u0e2a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e40\u0e23\u0e32\u0e04\u0e27\u0e23\u0e40\u0e23\u0e34\u0e48\u0e21\u0e04\u0e37\u0e2d\u0e27\u0e34\u0e40\u0e04\u0e23\u0e32\u0e30\u0e2b\u0e4c\u0e04\u0e39\u0e48\u0e41\u0e02\u0e48\u0e07 \u0e2b\u0e32\u0e41\u0e2d\u0e1b\u0e17\u0e35","datePublished":"2019-03-06T05:58:18+00:00","dateModified":"2019-03-06T05:58:19+00:00","publisher":{"@type":"Organization","name":"iOTech Enterprise","logo":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2018\/02\/logo-iOTECH_1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/static.iotech.co.th\/5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99-%e0%b8%81%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%a7%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2-mobile\/"},"author":{"@type":"Person","name":"\u0e1e\u0e35\u0e48\u0e08\u0e4b\u0e32"},"image":{"@type":"ImageObject","url":"https:\/\/static.iotech.co.th\/wp-content\/uploads\/2019\/03\/Star-up.jpg","width":626,"height":417}}]</script><link rel="dns-prefetch" href="https://static.iotech.co.th"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://static.iotech.co.th/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static.iotech.co.th/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="magnific-popup-css" href="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css" type="text/css" media="all"><link rel="stylesheet" id="oceanwp-style-css" href="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="oceanwp-hamburgers-css" href="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css" type="text/css" media="all"><link rel="stylesheet" id="oceanwp-3dx-css" href="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/3dx.css" type="text/css" media="all"><link rel="stylesheet" id="enlighter-local-css" href="https://static.iotech.co.th/wp-content/plugins/enlighter/resources/EnlighterJS.min.css" type="text/css" media="all"><script type="text/javascript" src="https://static.iotech.co.th/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static.iotech.co.th/wp-includes/js/jquery/jquery-migrate.min.js"></script><link rel="amphtml" href="https://static.iotech.co.th/5-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99-%e0%b8%81%e0%b8%a3%e0%b8%b0%e0%b8%9a%e0%b8%a7%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2-mobile/amp/"><link rel="icon" href="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" sizes="32x32"><link rel="icon" href="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png"><meta name="msapplication-TileImage" content="https://static.iotech.co.th/wp-content/uploads/2018/01/Artboard-%E2%80%93-1.png"><style type="text/css" id="wp-custom-css">
+			.blog-entry-inner .thumbnail,.vc_gitem-animate-scaleRotateIn,.vc_gitem-animated-block{height:140px;width:auto;overflow:hidden;display:block}.page-header-title{text-shadow:0 0 25px #fff}.related-thumb{display:block;background-color:#ececec;height:140px;overflow:hidden}#related-posts .col{text-align:left}article >.entry-content{font-family:Georgia,Cambria,"Times New Roman",Times,serif !important;font-weight:400;font-style:normal;font-size:21px}		</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css">
+.page-header{background-color:#efefef}/* General CSS */.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{color:#5e5e5e}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:87px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:87px}#site-header{border-color:#cccccc}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:48px}#searchform-dropdown input{background-color:#fcfcfc}#site-navigation-wrap .dropdown-menu >li >a{padding:0 12px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#0c0c0c}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#000000}#site-navigation-wrap .dropdown-menu >.current-menu-item >a,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a,#site-navigation-wrap .dropdown-menu >.current-menu-item >a:hover,#site-navigation-wrap .dropdown-menu >.current-menu-ancestor >a:hover{color:#000000}.oceanwp-social-menu ul li a,.oceanwp-social-menu .colored ul li a,.oceanwp-social-menu .minimal ul li a,.oceanwp-social-menu .dark ul li a{font-size:16px}.oceanwp-social-menu.simple-social ul li a{color:#686868}.oceanwp-social-menu.simple-social ul li a:hover{color:#6d6d6d!important}.mobile-menu .hamburger-inner,.mobile-menu .hamburger-inner::before,.mobile-menu .hamburger-inner::after{background-color:#000000}/* Blog CSS */@media only screen and (min-width:960px){body.single-post.content-both-sidebars .content-area{width:80%}body.single-post.content-both-sidebars.scs-style .widget-area.sidebar-secondary,body.single-post.content-both-sidebars.ssc-style .widget-area{left:-80%}}@media only screen and (min-width:960px){body.single-post.content-both-sidebars .widget-area{width:9%}body.single-post.content-both-sidebars.scs-style .content-area{left:9%}body.single-post.content-both-sidebars.ssc-style .content-area{left:18%}}.single-post.content-max-width .thumbnail,.single-post.content-max-width .entry-header,.single-post.content-max-width ul.meta,.single-post.content-max-width .entry-content p,.single-post.content-max-width .entry-content h1,.single-post.content-max-width .entry-content h2,.single-post.content-max-width .entry-content h3,.single-post.content-max-width .entry-content h4,.single-post.content-max-width .entry-content h5,.single-post.content-max-width .entry-content h6,.single-post.content-max-width .wp-block-image,.single-post.content-max-width .wp-block-gallery,.single-post.content-max-width .wp-block-video,.single-post.content-max-width .wp-block-quote,.single-post.content-max-width .wp-block-text-columns,.single-post.content-max-width .entry-content ul,.single-post.content-max-width .entry-content ol,.single-post.content-max-width .wp-block-cover-text,.single-post.content-max-width .post-tags,.single-post.content-max-width .comments-area{max-width:900px}.single-post.content-max-width .wp-block-image.alignleft,.single-post.content-max-width .wp-block-image.alignright{max-width:450px}.single-post.content-max-width .wp-block-image.alignleft{margin-left:calc( 50% - 450px)}.single-post.content-max-width .wp-block-image.alignright{margin-right:calc( 50% - 450px)}/* Footer Widgets CSS */#footer-widgets{padding:53px 0 30px 0}#footer-widgets{background-color:#2e3a40}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#ffffff}#footer-widgets li,#footer-widgets #wp-calendar caption,#footer-widgets #wp-calendar th,#footer-widgets #wp-calendar tbody,#footer-widgets .contact-info-widget i,#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"],#footer-widgets .posts-thumbnails-widget li,#footer-widgets .social-widget li a{border-color:rgba(85,85,85,0)}/* Footer Bottom CSS */#footer-bottom{background-color:#192126}#footer-bottom,#footer-bottom p{color:#ffffff}/* Typography CSS */body{font-family:Arial,Helvetica,sans-serif;font-weight:300;font-style:normal;font-size:16px;color:#4f4f4f}h1,h2,h3,h4,h5,h6,.theme-heading,.widget-title,.oceanwp-widget-recent-posts-title,.comment-reply-title,.entry-title,.sidebar-box .widget-title{font-family:Arial,Helvetica,sans-serif;font-weight:600}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Arial,Helvetica,sans-serif;font-weight:400;font-size:16px}.dropdown-menu ul li a.menu-link,#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-family:Arial,Helvetica,sans-serif;font-weight:400;font-size:14px}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{font-family:Arial,Helvetica,sans-serif;font-weight:400}.page-header .page-subheading{color:#939393}.single-post .entry-title{color:#3a3a3a}.sidebar-box,.footer-box{font-family:Arial,Helvetica,sans-serif;line-height:1.2}#footer-widgets .footer-box .widget-title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:16px;color:#5dbbea;line-height:1.6;letter-spacing:.9px}#footer-bottom #copyright{font-size:13px}#footer-bottom #footer-bottom-menu{font-size:13px}
+</style></head><body class="post-template-default single single-post postid-3131 single-format-standard wp-custom-logo oceanwp-theme sidebar-mobile default-breakpoint has-sidebar content-both-sidebars scs-style post-in-category-mobile has-blog-grid wpb-js-composer js-comp-ver-5.5.1 vc_responsive">
+
+	
+	<div id="outer-wrap" class="site clr">
+
+		
+		<div id="wrap" class="clr">
+
+			
+			
+<header id="site-header" class="minimal-header has-social center-logo clr" data-height="87" itemscope="itemscope" itemtype="http://schema.org/WPHeader"><div id="site-header-inner" class="clr container">
+
+				
+	<div class="oceanwp-mobile-menu-icon clr mobile-left">
+
+		
+		
+		
+		<a href="#" class="mobile-menu">
+							<div class="hamburger hamburger--3dx">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+					</a>
+
+		
+		
+		
+	</div>
+
+
+				
+
+<div id="site-logo" class="clr has-responsive-logo" itemscope itemtype="http://schema.org/Brand">
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="https://static.iotech.co.th/" class="custom-logo-link" rel="home"><img width="167" height="43" src="https://static.iotech.co.th/wp-content/uploads/2018/02/logo-iOTECH_1.png" class="custom-logo" alt="iOTech Enterprise" srcset="https://static.iotech.co.th/wp-content/uploads/2018/02/logo-iOTECH_1.png 1x,https://static.iotech.co.th/wp-content/uploads/2018/01/iotech_logo_wid.png 2x"></a><a href="https://static.iotech.co.th/" class="responsive-logo-link" rel="home"><img src="https://static.iotech.co.th/wp-content/uploads/2018/01/Group-12-1.png" class="responsive-logo" width="243" height="63" alt=""></a>
+	</div>
+
+	
+	
+</div>
+
+
+<div class="oceanwp-social-menu clr simple-social">
+
+	<div class="social-menu-inner clr">
+
+		
+			<ul><li class="oceanwp-facebook"><a href="https://www.facebook.com/iotechth/" target="_blank"><span class="fa fa-facebook"></span></a></li><li class="oceanwp-github"><a href="https://github.com/iotech-thailand" target="_blank"><span class="fa fa-github-alt"></span></a></li><li class="oceanwp-email"><a href="/cdn-cgi/l/email-protection#3744424711140606050c11140606060c4543111401030c5e11140606060c4352545f195411140606060c194311140607030c" target="_self"><span class="fa fa-envelope"></span></a></li>
+			</ul></div>
+
+</div>			<div id="site-navigation-wrap" class="clr">
+		
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu"><li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-424"><a href="https://static.iotech.co.th/" class="menu-link"><span class="text-wrap">Home</span></a></li><li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-138 nav-no-click"><a href="https://static.iotech.co.th/products-and-services/" class="menu-link"><span class="text-wrap">Service <span class="nav-arrow fa fa-angle-down"></span></span></a>
+<ul class="sub-menu"><li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://static.iotech.co.th/products-and-services/cloud-solution/" class="menu-link"><span class="text-wrap">Cloud Solution</span></a></li>	<li id="menu-item-872" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-872"><a href="/open-sources" class="menu-link"><span class="text-wrap">Open source</span></a></li>	<li id="menu-item-2846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2846"><a href="https://static.iotech.co.th/web-development/" class="menu-link"><span class="text-wrap">Web Development Service</span></a></li>	<li id="menu-item-2845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2845"><a href="https://static.iotech.co.th/moblie-application/" class="menu-link"><span class="text-wrap">Moblie Application Service</span></a></li></ul></li><li id="menu-item-2465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-2465"><a href="/blog" class="menu-link"><span class="text-wrap">Blog <span class="nav-arrow fa fa-angle-down"></span></span></a>
+<ul class="sub-menu"><li id="menu-item-2583" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2583"><a href="https://static.iotech.co.th/category/cloud/" class="menu-link"><span class="text-wrap">Cloud Technology</span></a></li>	<li id="menu-item-2584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2584"><a href="https://static.iotech.co.th/category/creative-design/" class="menu-link"><span class="text-wrap">Creative and Design</span></a></li>	<li id="menu-item-2849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2849"><a href="https://static.iotech.co.th/web/" class="menu-link"><span class="text-wrap">Web Development</span></a></li>	<li id="menu-item-2848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2848"><a href="https://static.iotech.co.th/mobile/" class="menu-link"><span class="text-wrap">Mobile Development</span></a></li></ul></li><li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="https://static.iotech.co.th/about-us/" class="menu-link"><span class="text-wrap">About us</span></a></li><li id="menu-item-2407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-2407"><a href="#" class="menu-link"><span class="text-wrap">Contact us <span class="nav-arrow fa fa-angle-down"></span></span></a>
+<ul class="sub-menu"><li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://static.iotech.co.th/contact/" class="menu-link"><span class="text-wrap">Contact form</span></a></li>	<li id="menu-item-3117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3117"><a href="https://static.iotech.co.th/career/" class="menu-link"><span class="text-wrap">Career</span></a></li></ul></li><li class="search-toggle-li"><a href="#" class="site-search-toggle search-dropdown-toggle"><span class="icon-magnifier"></span></a></li></ul><div id="searchform-dropdown" class="header-searchform-wrap clr">
+	
+<form method="get" class="searchform" id="searchform" action="https://static.iotech.co.th/">
+	<input type="text" class="field" name="s" id="s" placeholder="Search"></form></div>
+			</nav></div>
+		
+		
+	
+				
+			</div>
+
+			
+			
+		
+				
+	
+</header><main id="main" class="site-main clr"><header class="page-header centered-minimal-page-header"><div class="container clr page-header-inner">
+
+		
+			<h1 class="page-header-title clr" itemprop="headline">5 ขั้นตอน กระบวนการพัฒนา Mobile Application ตั้งแต่ต้นจนจบ</h1>
+
+			
+		
+		
+	</div>
+
+	
+	
+</header><div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article id="post-3131"><ul class="meta clr"><li class="meta-author" itemprop="name"><i class="icon-user"></i><a href="https://static.iotech.co.th/author/rattana/" title="เขียนโดย พี่จ๋า" rel="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">พี่จ๋า</a></li>
+		
+		
+		
+		
+	
+		
+					<li class="meta-date" itemprop="datePublished"><i class="icon-clock"></i>06/03/2019</li>
+		
+		
+		
+	
+		
+		
+					<li class="meta-cat"><i class="icon-folder"></i><a href="https://static.iotech.co.th/category/mobile/" rel="category tag">Mobile Development</a></li>
+		
+		
+		
+</ul><div class="entry-content clr" itemprop="text">
+	
+<figure class="wp-block-image"><img src="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg" alt="" class="wp-image-3132" srcset="https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up.jpg 626w,https://static.iotech.co.th/wp-content/uploads/2019/03/Star-up-300x200.jpg 300w" sizes="(max-width: 626px) 100vw, 626px"></figure><p><strong>1. วางแผน</strong></p>
+
+
+
+<p><strong>     1.1 ศึกษาคู่แข่ง</strong></p>
+
+
+
+<p>     หลังจากได้ไอเดียแล้ว เราก็ต้องมาวางแผนกัน เพื่อให้แอปเราประสบความสำเร็จให้ได้ จุดแรกสุดที่เราควรเริ่มคือวิเคราะห์คู่แข่ง หาแอปที่มีจุดมุ่งหมายคล้ายคลึงกัน และดูข้อมูลของ</p>
+
+
+
+<ul><li><strong>ยอดดาวน์โหลด</strong> ดูว่ามีคนใช้บ้างมั้ย</li><li><strong>รีวิวและเรทติ้ง</strong> ดูว่ามีคนชอบแอปแบบนี้มั้ย
+แล้วเค้าชอบไม่ชอบอะไร</li><li><strong>ประวัติบริษัท</strong> ดูว่าบริษัทไปได้ดีไหม
+แล้วเจอปัญหาอะไรบ้างระหว่างทาง และดูว่าเค้ามีวิธีสร้างฐานผู้ใช้ยังไง</li></ul><p>จุดประสงค์หลัก 2 ข้อ ของขั้นตอนนี้คือ</p>
+
+
+
+<ol><li>เรียนรู้ให้มากที่สุด เพราะความผิดพลาดมีราคาของมัน
+ไม่ว่าจะเป็นเวลา ความเครียด หรือเงิน ปกติคุณจะต้องลองผิดลองถูกหลายครั้ง
+กว่าจะเจอจุดที่ใช่จริงๆ การเรียนรู้จากคู่แข่ง ช่วยประหยัดเวลาไปได้เยอะมาก</li><li>เรียนรู้ว่าการจะเข้าไปแทรกในตลาดนี้ยากง่ายแค่ไหน
+ผู้คนอยากได้วิธีใหม่ในการแก้ปัญหานี้แค่ไหน
+มีคนแค่ไหนที่ไม่ได้รับความพึงพอใจกับวิธีเดิม เข้าใจช่องว่างนี้
+และปรับไอเดียของเราให้เหมาะกับช่องว่างตรงนั้น</li></ol><p><strong>      1.2 การหารายได้</strong></p>
+
+
+
+<p>      วิธีหารายได้มีหลายแบบ เช่น in-app purchases, subscription รายเดือน,        freemium/premium feature, ติดโฆษณา, ขายข้อมูล หรือโมเดลสามัญคือเป็น paid app จ่ายก่อนโหลด วิธีเลือกคือดูว่าตลาดอยากจะจ่ายแบบไหน และตอนนี้เค้าจ่ายกันแบบ ไหนอยู่กับบริการที่คล้ายๆกัน อีกอย่างที่ต้องคิดก็คือ เมื่อไหร่ที่เราจะเริ่มเก็บตัง เพราะ หลายๆแอปโดยเฉพาะ startup ข้ามขั้นตอนนี้ พอจะกลับมาคิดตังอีกทีก็ไม่ทันแล้ว ไม่ สามารถทำกำไรได้</p>
+
+
+
+<p><strong>       1.3 การตลาด</strong></p>
+
+
+
+<p>       ขั้นตอนนี้คือการระบุออกมาว่าเราจะทำการตลาดแอปเราได้ยังไง อะไรคืออุปสรรคใหญ่สุด สมมุติว่าคุณมีทีมดีไซน์เนอร์และ dev ที่สร้างแอปขั้นเทพออกมาได้ อุปสรรคขั้นต่อไปก็คือทำไงให้คนโหลด มันมีแอปที่ออกแบบสวยงามและใช้งานได้ดีมากมายบน store ที่ไม่มีคนโหลด เพราะงั้นคุณต้องรู้งบประมาณของคุณ และวิธีการทำการตลาดของคุณ และเขียนออกมาให้ได้</p>
+
+
+
+<p><strong>       1.4 Road Map</strong></p>
+
+
+
+<p>       ขั้นตอนสุดท้ายของการวางแผนก็คือการวาง Roadmap ขั้นตอนนี้คือการทำให้ทุกคนในทีมเข้าใจว่าแอปที่สร้างเสร็จจะเป็นแบบไหน และต้องการอะไรบ้างเพื่อที่จะประสบความสำเร็จในวันแรกของการปล่อย product ซึ่งเราเรียก product เวอร์ชั่นแรกนี้ว่า Minimum Viable Product (MVP) ในขั้นตอนนี้เราจะเขียนทุกสิ่งที่เราอยากให้แอปทำได้ แล้วเอามาเรียงลำดับความสำคัญ ดูว่าอะไรคือหัวใจหลัก อะไรทำให้ดูดผู้ใช้งานมาเริ่มใช้ของเราได้ และอะไรไว้เพิ่มที่หลังก็ได้ ถ้าบางอย่างเราคิดว่าผู้ใช้น่าจะอยากได้ พวกนั้นสมควรเอาไปทำหลังๆได้เลย เพราะหลังจากเราได้ผู้ใช้มาระดับนึงกับ MVP เราสามารถรู้ได้ดีขึ้นว่า feature ต่อไปควรทำอะไรจาก feedback ว่าผู้ใช้อยากได้จริงๆ และพวก analytics ที่เราติดไว้ก็มีส่วนช่วยมากๆ</p>
+
+
+
+<p><strong>2. ออกแบบ</strong></p>
+
+
+
+<p><strong>     2.1 ออกแบบ UX</strong></p>
+
+
+
+<p><strong>ออกแบบโครงสร้างข้อมูล</strong><strong></strong></p>
+
+
+
+<p> เป็นขั้นตอนที่เราตัดสินใจว่าแอปเราต้องแสดงข้อมูลอะไรบ้าง และทำงานอะไรได้บ้าง ปกติเราจะลิสต์มาว่าแอปมี feature อะไร ทำอะไรได้บ้าง และต้องแสดงข้อมูลอะไรที่หน้าไหนของแอป จากนั้นเราก็มาสร้างเป็น wireframe</p>
+
+
+
+<p><strong>Wireframe</strong></p>
+
+
+
+<p>ขั้นต่อไป เราจะเริ่มสร้างแต่ละ screen และกำหนดการทำงานและข้อมูลที่จะแสดง
+ต้องทำให้มั่นใจว่าข้อมูลที่จะแสดงต้องมีที่อยู่ของมัน
+ควรเริ่มต้นในกระดาษเพราะมันจะแก้เยอะ และแก้บ่อย จะได้แก้ง่ายๆ ดีกว่าไปแก้ใน process
+หลังๆ แล้วก็มาทำต่อด้วยพวกแอปแบบ Sketch หรือแอปสร้าง
+wireframe ที่เราถนัด พอเรามี screen ครบแล้ว
+เราก็จะมาสร้างแอป workflow กัน</p>
+
+
+
+<p><strong>Workflows</strong></p>
+
+
+
+<p>Workflow คือเส้นทางที่ user
+สามารถท่องไปในแอปของเราได้ ทุกๆอย่างที่เราอยากให้ user ทำและเห็นได้ ต้องใช้กี่คลิกเพื่อที่จะทำมันได้สำเร็จ
+ต้องทำให้มั่นใจว่าทุกคลิกนั้นเข้าใจได้อย่างง่ายดาย โดยผู้ใช้ไม่งง ถ้าบางอย่างใหญ่ๆ
+ใช้ไม่กี่คลิกเพื่อทำจนสำเร็จก็ยังถือว่าดี
+แต่บางอย่างง่ายๆก็ไม่ควรต้องใช้หลายคลิกเกิน พอเราเจอปัญหาใน workflow เราก็ต้องกลับไปอัพเดท wireframe และก็ลองใหม่ด้วยการเทสทุก
+flow ตั้งแต่ต้น เพื่อให้มั่นใจว่าการแก้ flow นี้ให้ง่ายขึ้น ไม่ได้ทำให้อีก flow ยากขึ้นแทน</p>
+
+
+
+<p><strong>Click-through
+model</strong></p>
+
+
+
+<p>Click-through model ช่วยให้เราทดสอบ
+wireframe และ workflow โดยการให้ user
+ได้ทดลองเหมือนเล่นจริง โดย user จะได้รับ link
+อันนึง เมืองเปิดบนมือถือ user จะสามารถคลิกที่ปุ่มต่างๆ
+และเปิดไปยังหน้า wireframe ต่างๆ ตาม workflow ได้เหมือนแอปจริงๆ ในขั้นตอนนี้จะยังไม่มีการทำงานใดๆทั้งสิ้น
+เป็นแค่รูปภาพของแต่ละหน้าเพื่อทดสอบ navigation ของแอป
+เมื่อเราเจอปัญหาที่หน้าไหน ก็แก้ wireframe หน้านั้น
+และทดลองใหม่จนกว่าจะพอใจ tools ที่ใช้ได้ก็มี invision,
+sketch, adobe xd</p>
+
+
+
+<p><strong>     2.2. ออกแบบ UI</strong></p>
+
+
+
+<p><strong>Style guide</strong></p>
+
+
+
+<p>Style guide หรือ UI
+Kit เป็นเหมือนต้นแบบของสิ่งต่างๆในแอป การมี style ที่ชัดเจนจะช่วยให้ user ไม่งงกับการใช้งานแอปเรา
+เราไม่อยากจะให้แอปเรา หน้านึงมีปุ่ม ok สีฟ้าอยู่ข้างล่าง
+อีกหน้านึงเป็นสีเขียวตรง header หรอก การมี style ที่จัดเจนและตรงกันทั้งแอปจะทำให้ user ใช้งานได้ลื่นขึ้น</p>
+
+
+
+<p>การกำหนด Style guide ก็ต้องดูด้วยว่าลูกค้าและผู้ใช้เราเป็นใคร
+แอปจะใช้เวลาไหน ถ้าใช้กลางคืนก็อาจจะต้องทำสีให้ dark หน่อย
+ถ้าถูกใช้โดยพนักงานบริษัทที่งานยุ่งมากๆ ก็อาจจะต้องลดขั้นตอนยุ่งยาก
+และทำให้งานสำเร็จได้โดยไว designer ที่มีประสบการณ์จะต้องสามารถออกแบบผลงานออกมาให้เหมาะกับผู้ใช้ให้มากที่สุด
+ผลลัพธ์ของขั้นตอนนี้ เราจะได้สี, fonts, และ widget เช่น ปุ่ม, ฟอร์ม, label ที่จะเอามาใช้ในแอปเราทั้งหมด</p>
+
+
+
+<p><strong>Rendered
+design</strong></p>
+
+
+
+<p>ขั้นนี้คือการเปลี่ยน wireframe สีขาวดำของเราให้กลายเป็นหน้าตาแอปจริงๆ
+โดยใช้ Style guide ที่สร้างขั้นเมื่อขั้นตอนที่แล้ว
+พยายามอิงกับ Style guide ในทุกจุด
+แต่ถ้ามีจุดไหนต้องอัพเดทหรือเพิ่ม Style guide ก็สามารถกลับไปอัพเดทได้
+แต่ต้องให้มั่นใจว่าผลลัพ์ออกมามีความสอดคล้องกันทั้งแอป</p>
+
+
+
+<p><strong>Rendered
+click-through model</strong></p>
+
+
+
+<p>หลังได้หน้าตาแอปจริงทั้งหมดมาแล้ว
+ให้เรากลับมาทำ click-through
+model อีกรอบ ในขั้นตอนนี้อาจจะต้องใช้เวลามากหน่อย
+เพื่อให้มั่นใจว่าจะไม่มีการแก้ไขใหญ่ๆอีกแล้ว เพราะหลังจากขั้นตอนนี้
+การเปลี่ยนอะไรบางอย่างจะมีราคาแพงและใช้เวลานานขึ้น
+ให้คิดว่าขั้นตอนนี้คือการเช็คพื้นครั้งสุดท้ายก่อนที่จะเริ่มเทปูนซีเมน
+แน่นอนว่าหลังจากนี้ไม่ใช่ว่าจะเปลี่ยนอะไรไม่ได้เลย
+แต่การเปลี่ยนแต่ละครั้งจะมีราคาสูงขึ้นมาก</p>
+
+
+
+<p><strong>การส่งไม้ต่อจาก
+</strong><strong>Design ไปยัง Development</strong></p>
+
+
+
+<p>หลังจากใช้พลังงานอย่างมากไปในการออกแบบว่าแอปจะมีหน้าตายังไงและทำอะไรได้บ้าง
+มันจำเป็นอย่างมากที่จะทำให้ dev team เข้าใจใน vision ตรงกัน หลายๆองค์กร ทำตรงนี้ได้แย่เพราะเหตุผลหลายๆอย่าง designer และ developer คล้ายๆกับอยู่กันคนละโลก
+บางที่อาจจะสื่อสารกันไม่เข้าใจเพราะแต่ละคนก็มองจากมุมตัวเอง ถ้าในองค์กร ทีม designer
+เข้าใจ technical ขึ้นนิดหน่อย และ dev
+team ก็ทำความเข้าใจกับมุมมองของ designer ขึ้นอีกนิด
+จะทำให้การทำงานราบรื่นขึ้นเยอะมาก Tool ที่แนะนำให้ใช้ก็คือ
+Zeplin (ที่ GetLinks ก็ใช้อยู่) Designer
+จะเป็นคนอัพโหลด design ขึ้นไป แล้ว dev
+สามารถเอา Style guide มาใช้ได้เลย dev
+ไม่ต้องเดา dimension ค่าสี hex และตำแหน่งที่แน่นอนบนหน้าจอ dev สามารถพัฒนา pixel-perfect
+แอปจาก design ได้ทันที</p>
+
+
+
+<p><strong>3. เขียน code</strong></p>
+
+
+
+<p><strong>     3.1 เลือก Tech stack</strong></p>
+
+
+
+<p>มันมีหลายวิธีและ technology ที่ใช้ในการพัฒนาแอปได้
+แต่ละวิธีก็มีข้อดีข้อเสียต่างกัน บางอย่างอาจจะราคาถูก แต่ประสิทธิภาพของแอปตก
+บางอย่างอาจจะซับซ้อน และใช้เวลานานเกินไปสำหรับแอปที่เราจะทำ
+แต่ทางเลือกที่แย่ที่สุดคือการใช้ technology ที่กำลังจะตาย
+หรือไม่สเถียร ถ้าคุณทำผิดพลาดไปแบบนั้น คุณอาจจะต้องสร้างใหม่ทั้งหมด
+หรือไม่ก็จ่ายค่า maintanance สูงลิบลิ่ว</p>
+
+
+
+<p><strong>ฝั่ง </strong><strong>Front-end</strong></p>
+
+
+
+<p>ในการทำ mobile app มี 3 ทางเลือก</p>
+
+
+
+<ol><li>Native ทำแอปแยกแต่ละ platform ไม่สามารถ reuse code
+ระหว่างกันได้ วิธีนี้ทำให้ปรับแต่งได้สูงสุด UI เป็นของ platform 100% แอปเร็วและมีประสิทธิภาพสูง
+เป็นวิธีที่แพงที่สุด เพราะต้องทำแต่ละ platform ใหม่ทั้งหมด</li><li>Cross-platform
+เป็นเทคโนโลยีที่มี code บางส่วนหรือทั้งหมดแชร์กัน
+แต่ก็ยัง build ไปรันเป็น Native เช่น React
+Native, Xamarin อันนี้เป็นวิธีสายกลางที่ประหยัดเงินและเวลา
+ถ้าเราไม่ต้องการ performance สูงสุดขนาดแบบแรก</li><li>Hybrid เป็นวิธีที่ใช้เทคโนโลยีของ
+web (HTML, CSS, Javascript) และ install ผ่าน native wrapper เช่น Cordova, Phone
+Gap, Ionic วิธีนี้อาจจะราคาถูกสุด แต่แอปออกมาคุณภาพค่อนข้างต่ำ
+และช้ามาก</li></ol><p><strong>ฝั่ง </strong><strong>Back-end (Web API & Server)</strong></p>
+
+
+
+<p>Server มีผลอย่างมากกับประสิทธิภาพของแอป
+และการขยายจำนวนผู้ใช้ที่แอปรองรับได้ มีสิ่งที่ต้องตัดสินใจก่อนจะเริ่มเขียน code
+ดังนี้</p>
+
+
+
+<ol><li>ภาษา Java, C#, Go-lang, Javascript, PHP, Python, Ruby แต่ละภาษาก็จะมี framework ที่ช่วยในการเขียนของตัวเอง</li><li>Database มี 2 ประเภทหลักๆ SQL และ noSQL
+SQL เป็นของดั้งเดิมที่มักจะเป็นทางเลือกที่ดีที่สุดในแทบทุกกรณี
+มีหลายยี่ห้อให้เลือก เช่น MSSQL, MySQL, PostgreSQL เป็นต้น
+noSQL มักใช้ในสถานการณ์ที่ต้องการเก็บข้อมูลปริมาณมหาศาลหรือไม่มีการแก้ไขข้อมูลเดิมบ่อยๆ
+นอกจากการเลือก database แล้วยังมีเรื่องของการออกแบบ schema
+ว่าจะเก็บข้อมูลยังไง การออกแบบที่ดีจะส่งผลต่อความสำเร็จในระยะยาว
+ดังนั้นในขั้นตอนนี้ต้องมั่นใจว่า database ได้ออกแบบไว้อย่างดี
+และรองรับอนาคต</li><li>Hosting environment (Infrastructure) เลือกว่าจะ host server เราไว้ที่ไหน
+ตัดสินใจจากราคา ความสามารถในการขยายสเกล ความสามารถที่ทำได้ บริการเสริม
+การใช้งานง่าย ประสิทธิภาพ และความสเถียร มีหลายเจ้า เช่น AWS, Google
+Cloud, Heroku, Azure นอกเหนือจากนั้นเรายังต้องวางแผนเผื่อการสเกล
+เมื่อจำนวนผู้ใช้เพิ่มมากขั้น Cloud-base ทำให้เราสามารถจ่ายเงินเพื่อเพิ่มหรือลดได้ตามความจำเป็น
+นอกจากนี้ยังมีบริการเสริม เช่น backup database, server uptime, update os
+และอีกมากมาย</li></ol><p><strong>     3.2 Agile development process</strong></p>
+
+
+
+<p>คือการแตกย่อยงานที่ต้องพัฒนาทั้งหมดออกมาเป็น
+milestone ที่เล็กลง และเริ่มพัฒนาแอปเราเป็นรอบๆ วนลูปไปเรื่อยๆ
+ในแต่ละรอบจะมีการวางแผน, การพัฒนา, การเทส,
+และการรีวิว เรื่อง Agile เป็นเรื่องที่มีการเผยแพร่เยอะ
+และมีรายละเอียดเยอะ แต่ในบทความนี้จะเล่าแค่คร่าวๆ
+ในระดับที่เพียงพอต่อการทำงานในแต่ละ step ก็พอ</p>
+
+
+
+<p><strong>การวางแผน</strong><strong></strong></p>
+
+
+
+<p>การวางแผนคือการแบ่งงานออกเป็นลิสต์ของ task ที่จะ code ในรอบ iteration นี้ แต่ละ task จะต้องมี requirement ที่ชัดเจน หลังจากที่ developer
+เข้าใจ requirement ดีแล้ว developer ก็จะประเมินเวลาที่ต้องใช้ในการทำแต่ละ task เพื่อที่จะกระจายงานกันไปทำได้อย่างสมดุลกับปริมาณงานที่ทีมทำได้ในแต่ละ
+sprint</p>
+
+
+
+<p>Developer จะเริ่มวางแผนว่าจะเขียน
+solution ยังไงเพื่อมาแก้ปัญหาในแต่ละ task developer
+เก่งๆจะหาทาง reuse code ทั้งแอปให้มากที่สุด
+เช่นพวก style หรือ function ที่ใช้ร่วมกันได้
+ถ้าต้องเปลี่ยน design ก็แค่ไปอัพเดทที่เดียวก็จะเปลี่ยนทั้งหมด
+ไม่ต้องไปนั่งไล่อัพเดททุกๆที่</p>
+
+
+
+<p><strong>การพัฒนา</strong><strong></strong></p>
+
+
+
+<p>Developer จะเริ่ม code
+ตาม requirement ใน task ที่ได้รับมอบหมาย developer ต้องเข้าใจเป้าหมายสูงสุดของแอป
+และเจตนาของแต่ละ task ถ้าบางอย่างมันทำไปแล้วดูไม่ถูกต้อง developer
+ต้องรีบมาบอก PM เพื่อจะได้หาทางออกกัน เมื่อ task
+นั้นๆ เสร็จก็จะ deploy ขึ้น development
+version ให้ tester เทสได้</p>
+
+
+
+<p><strong>การเทส</strong><strong></strong></p>
+
+
+
+<p>การเทสควรทำโดยคนที่ไม่ใช่ developer ที่ code
+แอปนี้ขึ้นมา เพราะ developer จะรู้อยู่แล้วว่าตรงไหนทำอะไรได้
+บางทีก็จะไม่เจอสิ่งที่ user ที่ใช้งานจริงจะเจอเมื่อใช้งานทั่วไป
+การเทสมีหลายประเภทในแต่ละความคืบหน้าของการพัฒนา</p>
+
+
+
+<ul><li><strong>Functional Test</strong> การเทสว่า feature นี้ทำงานได้ถูกต้องตาม requirement หรือไม่ ทีม QA
+จะมี test case, action step และผลลัพธ์ที่คาดหวังว่าจะให้มันเกิด</li><li><strong>Usability Testing </strong>เทสว่าผู้ใช้ไม่งง และใช้งานง่ายพอมั้ย
+ตอนเทสควรเอาคนที่เคยเห็นแอปเป็นครั้งแรกมาเทส
+เพื่อจำลองว่าเค้าเป็นคนที่เพิ่งเริ่มใช้จริงๆ โดยกำหนด target group เพื่อนำมาเทส
+สัมภาษณ์ว่าเค้ามี background ยังไง
+จากนั้นก็ให้เค้าใช้แอปเหมือนคนเพิ่งเห็นแอปนี้ครั้งแรกใน store ไม่ต้องแนะนำวิธีใช้ ดูว่าเค้าใช้แอปเรายังไง ติดตรงไหน หลังจากเสร็จก็ถาม
+feedback และนำมาปรับปรุงแอปต่อไป</li><li><strong>Performance Testing </strong>ถ้าแอปใช้เวลา 20 วิในการเปิด
+ต่อให้ทำงานถูกต้องก็คงไม่มีใครใช้ Performance Testing ต้องทำก่อนปล่อยให้
+user จริงใช้ แต่ถ้าเทสเจอตั้งแต่แรกๆ
+ก็อาจจะทำให้แก้ไขได้ง่ายกว่าไปแก้ตอนท้าย</li><li><strong>Regression Testing </strong>เทส feature ที่เคยทำเสร็จและเทสผ่านไปใน sprint
+ก่อนๆ เพราะการทำงานใน sprint นี้อาจส่งผลกระทบกับ
+feature เก่าทำให้ทำงานผิดพลาดได้ tester ที่ดีควรจะมี list ของ test case เพื่อมาเทสของ sprint ที่ผ่านไปแล้วด้วย</li><li><strong>Device-Specific Testing </strong>เทสบนหลายๆ screen size และ OS
+version หรือ browser มีหลาย tool ที่ช่วยจำลองเครื่องหลายๆรุ่นได้ แต่ก็ต้องเทสบนเครื่องจริงจำนวนนึง
+เพื่อให้มั่นใจว่ามันทำงานได้แน่ๆบนเครื่องส่วนใหญ่</li><li><strong>User Acceptance Testing </strong>ให้ user จริงๆ เทส และเก็บ feedback จริง</li></ul><p>เมื่อเจอบัคก็ต้องสร้าง task ให้ developer
+ไปแก้ไขและปิด issue task นี้</p>
+
+
+
+<p><strong>sprint รีวิว/retrospective</strong></p>
+
+
+
+<p>ตอนท้ายของทุก sprint จะมีประชุมเพื่อคุยกับทุกคนที่เกี่ยวข้องว่า
+sprint ที่ผ่านมาเป็นยังไงบ้าง อะไรดี อะไรไม่ดี
+ถ้ามีปัญหาอะไรก็จะได้พยายามแก้ไขไม่ให้เกิดอีกใน sprint หน้า
+ถ้าบางอย่างมันดีในส่วนไหน ก็นำมาใช้กับส่วนอื่นๆ พอจบ sprint review ก็จะต้องวนกลับไป ขั้นตอนการวางแผน และทำวนไปเรื่อยๆ จนแอปเสร็จ</p>
+
+
+
+<p><strong>Beta testing</strong></p>
+
+
+
+<p>เมื่อแอปเราเสร็จเรียบร้อย เราอาจจะทำ beta launch อีกรอบ beta
+launch คือการให้ผู้ใช้งานกลุ่มเล็กๆ
+ใช้งานจริงในสถานการณ์จริงเหมือนกับแอปเรา launch ไปแล้ว
+ส่วนใหญ่กลุ่มนี้จะเป็น power user, early adopter หรือลูกค้าที่ชอบเราเป็นทุนเดิม
+ในขั้นตอนนี้เราจะได้ข้อมูลที่หลากหลายขึ้นอย่างมาก
+เราอาจจะเจอปัญหาที่ไม่เคยเทสเจอมาก่อนมากมาย
+ซึ่งดีกว่าปล่อยแอปและทำการตลาดแล้วเพิ่งมาเจอปัญหาทีหลัง</p>
+
+
+
+<p>หลังจาก Beta testing แล้วแก้ปัญหาที่พบไปจนหมด
+และไม่มีปัญหาใหม่ๆ รายงานมาอีกแล้ว ก็เริ่ม step ต่อไปได้</p>
+
+
+
+<p><strong>4. ปล่อยแอป</strong></p>
+
+
+
+<p>แอปทั่วไปจะมี 2 ส่วนที่สำคัญที่เราต้อง
+deploy ก็คือ web server กับ client
+ที่ไว้บน Google Play หรือ Apple Store</p>
+
+
+
+<p><strong>Web
+API (Server)</strong></p>
+
+
+
+<p>ส่วนนี้คือการรับส่งและเก็บข้อมูลของ mobile app ถ้า server
+โดนใช้งานหนักเกิน หรือล่ม แอปก็ทำงานไม่ได้ไปด้วย server ต้องสามารถ scale ได้เมื่อเกิดเหตุการณ์ไม่คาดฝันหรือแอปเกิดบูมขึ้นมา
+เทคโนโลยีฝั่ง server ก็มีหลากหลาย ตั้งแต่ Infra ไปจนถึง programming ยกตัวอย่างเช่น AWS,
+Google Cloud, Kubernetes, Docker, Node.js, RoR, etc.</p>
+
+
+
+<p><strong>App Store</strong></p>
+
+
+
+<p>การอัพแอปขึ้น store เราต้องมั่นใจว่าแอปได้
+config ถูกต้องสำหรับ production มีขั้นตอนหลายขั้นตอนในการทำ
+มีฟอร์มหลายอันที่ต้องกรอก ต้องทำ screenshot และเนื้อหาสำหรับ
+marketing ต้องเขียนคำอธิบาย และเราก็ submit ขึ้นไป ฝั่ง Apple จะมีการตรวจที่ละเอียดกว่า Google
+Play ฝั่ง Apple จะใช้เวลา 2–3 วัน ส่วน Google Play จะได้ในไม่กี่ชั่วโมงเลย</p>
+
+
+
+<p><strong>5. สังเกตการณ์ และวัดผล</strong></p>
+
+
+
+<p>เมื่อ submit app ขึ้นไปแล้ว งานของเรายังไม่จบ จะเห็นได้ว่าแอปดังๆทุกแอปมีลิสต์ของอัพเดทยาวเป็นหางว่าว
+ไม่ว่าจะเป็น แก้บัค, เปลี่ยน เพิ่มฟีเจอร์
+การสังเกตการณ์สำคัญมากๆ เพื่อเราจะได้รู้ว่าต้องอัพเดทอะไร
+นี่คือสิ่งที่ต้องสังเกตการณ์</p>
+
+
+
+<p><strong>Crashes</strong></p>
+
+
+
+<p>มีหลายเจ้าที่ track app crash ได้ <a href="https://sentry.io/" target="_blank" rel="noreferrer noopener">Sentry</a>, <a href="https://hockeyapp.net/features/crashreports/" target="_blank" rel="noreferrer noopener">HockeyApp</a>, <a href="https://rollbar.com/" target="_blank" rel="noreferrer noopener">Rollbar</a>, <a href="https://get.fabric.io/" target="_blank" rel="noreferrer noopener">Fabric</a> ฯลฯ
+มันสามารถดูได้ด้วยว่าก่อน crash user ทำอะไรอยู่หน้าไหน
+เครื่องรุ่นอะไร และข้อมูลแวดล้อมอื่นๆ และสามารถแจ้งเตือนแบบ realtime ผ่าน email/sms ได้ทันทีที่ crash</p>
+
+
+
+<p><strong>Analytics</strong></p>
+
+
+
+<p>analytics ใหม่ๆสามารถ track
+ข้อมูลได้แทบทุกอย่างของ user ทำให้คุณเข้าใจว่า
+user คือใคร อายุ เพศ สถานที่ ภาษา และเค้าใช้งานแอปเรายังไง
+เวลาที่เล่น เวลาที่ใช้ในแอป หน้าที่ดู และไปจนถึงพฤติกรรมเช่น heatmap หรือปุ่มไหนโดนคลิกเยอะสุด ใช้ข้อมูลตรงนี้ทำความเข้าใจ user ให้มากที่สุด และดูว่าตรงไหนควรลงทุนลงแรงในอนาคต
+อย่าไปลงแรงกับส่วนที่ไม่ค่อยมีคนใช้
+แต่ลงในส่วนที่มีความเป็นไปได้ว่าจะเกิดการเติบโตสูงที่สุด tool ที่ใช้ <a href="https://analytics.facebook.com/" target="_blank" rel="noreferrer noopener">Facebook
+Analytics</a>, <a href="https://www.apptentive.com/" target="_blank" rel="noreferrer noopener">Apptentive</a>, <a href="https://www.google.com/analytics/" target="_blank" rel="noreferrer noopener">Google Analytics</a>, <a href="https://www.appsee.com/" target="_blank" rel="noreferrer noopener">Appsee</a></p>
+
+
+
+<p><strong>Performance</strong></p>
+
+
+
+<p>แอปเปิดได้ไวแค่ไหน ทำงานได้ไวแค่ไหน
+เราจะดูได้ว่า action ไหนใช้เวลาเท่าไหร่ แล้วเราจะเจอจุดที่ต้องปรับปรุงที่นั่น
+เราสามารถตั้งให้ alert เมื่อเกิดเหตุการณ์ที่บาง action
+ใช้เวลานานผิดปกติ เราจะได้เข้าไปดูว่าเกิดปัญหาอะไรขึ้นหรือไม่ tool
+ที่ใช้ <a href="https://prometheus.io/" target="_blank" rel="noreferrer noopener">Prometheus</a>, <a href="https://newrelic.com/" target="_blank" rel="noreferrer noopener">New Relic</a></p>
+
+
+
+<p><strong>App Store
+Management</strong></p>
+
+
+
+<p>Rating และ Review
+ใน Store เป็นสิ่งสำคัญมากๆ ทุกครั้งที่มี review
+ใหม่ ต้องมั่นใจว่าเราได้เข้าไปดูคนรีวิว ขอบคุณ
+หรือพยายามช่วยเหลือในสิ่งที่ทำให้เค้าโมโหจนให้ 1 ดาว
+ซึ่งหลายครั้งที่การ customer support แค่เล็กน้อยทำให้เค้าเปลี่ยนจาก
+1 ดาวเป็น 5 ดาวได้ และบริการที่ดีก็ทำให้ชื่อเสียงเราดีตามไปด้วย</p>
+
+
+
+<p><strong>Further
+Iteration and Improvement</strong></p>
+
+
+
+<p>เป้าหมายของการสังเกตการณ์คือจะได้รู้ว่าเราควรทำอะไรเป็นสิ่งต่อไป เพราะถ้าเราเปิดให้คนใช้ และดูแลแอปนี้ไปสักพัก มันก็จะต้องมี feature ใหม่ๆเพิ่มเข้ามาเพื่อปรับปรุงให้ดีขึ้นไปเรื่อยๆ ใช้ข้อมูลจากผู้ใช้ และการ monitor แล้วเอาไปเข้า development process loop เพิ่ม conversion rate, install number, และรายได้ไปเรื่อยๆ </p>
+
+
+
+<p>ที่มา — <a rel="noreferrer noopener" href="https://thebhwgroup.com/blog/mobile-app-development-process" target="_blank">https://thebhwgroup.com/blog/mobile-app-development-process</a></p>
+</div>
+
+<div class="post-tags clr">
+	</div>
+
+
+	<nav class="navigation post-navigation" role="navigation"><h2 class="screen-reader-text">Continue Reading</h2>
+		<div class="nav-links"><div class="nav-next"><a href="https://static.iotech.co.th/51-%e0%b8%a0%e0%b8%b2%e0%b8%a9%e0%b8%b2-programming-%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%94%e0%b8%b5%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b9%83%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3/" rel="next"><span class="title"><i class="fa fa-long-arrow-right"></i>Next Post</span><span class="post-title">5+1 ภาษา Programming ที่ดีที่สุดในการพัฒนา Mobile App</span></a></div></div>
+	</nav><section id="related-posts" class="clr"><h3 class="theme-heading related-posts-title">
+			<span class="text">You Might Also Like</span>
+		</h3>
+
+		<div class="oceanwp-row clr">
+
+			
+			
+				
+				<article class="related-post clr col span_1_of_3 col-1 post-3219 post type-post status-publish format-standard has-post-thumbnail hentry category-mobile entry has-media"><figure class="related-post-media clr"><a href="https://static.iotech.co.th/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b9%81%e0%b8%ad%e0%b8%9b%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%94%e0%b8%b5/" class="related-thumb">
+
+								<img width="300" height="189" src="https://static.iotech.co.th/wp-content/uploads/2019/03/mo3-300x189.jpg" class="attachment-medium size-medium wp-post-image" alt="แนวทางการพัฒนาแอปที่ดีนั้นควรเป็นอย่างไร?" itemprop="image" srcset="https://static.iotech.co.th/wp-content/uploads/2019/03/mo3-300x189.jpg 300w,https://static.iotech.co.th/wp-content/uploads/2019/03/mo3.jpg 636w" sizes="(max-width: 300px) 100vw, 300px"></a>
+
+						</figure><h3 class="related-post-title">
+						<a href="https://static.iotech.co.th/%e0%b9%81%e0%b8%99%e0%b8%a7%e0%b8%97%e0%b8%b2%e0%b8%87%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%9e%e0%b8%b1%e0%b8%92%e0%b8%99%e0%b8%b2%e0%b9%81%e0%b8%ad%e0%b8%9b%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%94%e0%b8%b5/" title="แนวทางการพัฒนาแอปที่ดีนั้นควรเป็นอย่างไร?" rel="bookmark">แนวทางการพัฒนาแอปที่ดีนั้นควรเป็นอย่างไร?</a>
+					</h3>
+									
+					<time class="published" datetime="2019-03-11T14:47:23+07:00"><i class="icon-clock"></i>11/03/2019</time></article><article class="related-post clr col span_1_of_3 col-2 post-3222 post type-post status-publish format-standard has-post-thumbnail hentry category-mobile entry has-media"><figure class="related-post-media clr"><a href="https://static.iotech.co.th/4-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-apps-%e0%b8%aa%e0%b8%b9%e0%b9%88%e0%b8%95%e0%b8%a5%e0%b8%b2%e0%b8%94/" class="related-thumb">
+
+								<img width="300" height="141" src="https://static.iotech.co.th/wp-content/uploads/2019/03/mo5-1-300x141.png" class="attachment-medium size-medium wp-post-image" alt="4 ขั้นตอนสร้าง Apps สู่ตลาด" itemprop="image" srcset="https://static.iotech.co.th/wp-content/uploads/2019/03/mo5-1-300x141.png 300w,https://static.iotech.co.th/wp-content/uploads/2019/03/mo5-1.png 553w" sizes="(max-width: 300px) 100vw, 300px"></a>
+
+						</figure><h3 class="related-post-title">
+						<a href="https://static.iotech.co.th/4-%e0%b8%82%e0%b8%b1%e0%b9%89%e0%b8%99%e0%b8%95%e0%b8%ad%e0%b8%99%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-apps-%e0%b8%aa%e0%b8%b9%e0%b9%88%e0%b8%95%e0%b8%a5%e0%b8%b2%e0%b8%94/" title="4 ขั้นตอนสร้าง Apps สู่ตลาด" rel="bookmark">4 ขั้นตอนสร้าง Apps สู่ตลาด</a>
+					</h3>
+									
+					<time class="published" datetime="2019-03-11T16:12:39+07:00"><i class="icon-clock"></i>11/03/2019</time></article><article class="related-post clr col span_1_of_3 col-3 post-3136 post type-post status-publish format-standard has-post-thumbnail hentry category-mobile entry has-media"><figure class="related-post-media clr"><a href="https://static.iotech.co.th/51-%e0%b8%a0%e0%b8%b2%e0%b8%a9%e0%b8%b2-programming-%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%94%e0%b8%b5%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b9%83%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3/" class="related-thumb">
+
+								<img width="265" height="300" src="https://static.iotech.co.th/wp-content/uploads/2019/03/mo2-265x300.jpg" class="attachment-medium size-medium wp-post-image" alt="5+1 ภาษา Programming ที่ดีที่สุดในการพัฒนา Mobile App" itemprop="image" srcset="https://static.iotech.co.th/wp-content/uploads/2019/03/mo2-265x300.jpg 265w,https://static.iotech.co.th/wp-content/uploads/2019/03/mo2.jpg 345w" sizes="(max-width: 265px) 100vw, 265px"></a>
+
+						</figure><h3 class="related-post-title">
+						<a href="https://static.iotech.co.th/51-%e0%b8%a0%e0%b8%b2%e0%b8%a9%e0%b8%b2-programming-%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%94%e0%b8%b5%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b9%83%e0%b8%99%e0%b8%81%e0%b8%b2%e0%b8%a3/" title="5+1 ภาษา Programming ที่ดีที่สุดในการพัฒนา Mobile App" rel="bookmark">5+1 ภาษา Programming ที่ดีที่สุดในการพัฒนา Mobile App</a>
+					</h3>
+									
+					<time class="published" datetime="2019-03-06T13:22:14+07:00"><i class="icon-clock"></i>06/03/2019</time></article></div>
+
+	</section></article></div>
+
+			
+		</div>
+
+		
+		
+
+<aside id="left-sidebar" class="sidebar-container widget-area sidebar-secondary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="left-sidebar-inner" class="clr">
+
+		
+	</div>
+
+	
+</aside><aside id="right-sidebar" class="sidebar-container widget-area sidebar-primary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="right-sidebar-inner" class="clr">
+
+		
+	</div>
+
+	
+</aside></div>
+
+	
+
+        </main><footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter"><div id="footer-inner" class="clr">
+
+        
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+	
+	<div class="footer-widgets-inner container">
+
+        			<div class="footer-box span_1_of_4 col col-1">
+				<div id="media_image-6" class="footer-widget widget_media_image clr"><img width="198" height="198" src="https://static.iotech.co.th/wp-content/uploads/2018/01/Group-131.png" class="image wp-image-63  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" srcset="https://static.iotech.co.th/wp-content/uploads/2018/01/Group-131.png 198w,https://static.iotech.co.th/wp-content/uploads/2018/01/Group-131-150x150.png 150w" sizes="(max-width: 198px) 100vw, 198px"></div><div id="text-2" class="footer-widget widget_text clr">			<div class="textwidget"><p>บริษัท ไอโอเทค เอ็นเตอร์ไพรส์ จำกัด<br>
+iOTech Enterprise Co.,Ltd.</p>
+</div>
+		</div>			</div>
+
+							<div class="footer-box span_1_of_4 col col-2">
+					<div id="nav_menu-8" class="footer-widget widget_nav_menu clr"><h4 class="widget-title">Product & Services</h4><div class="menu-service-menu-container"><ul id="menu-service-menu" class="menu"><li id="menu-item-1253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1253"><a href="https://static.iotech.co.th/products-and-services/application-development/">Application Development</a></li>
+<li id="menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1258"><a href="https://static.iotech.co.th/products-and-services/cloud-solution/">Cloud Solution</a></li>
+<li id="menu-item-1263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1263"><a href="/web-development">Web Development</a></li>
+<li id="menu-item-1268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1268"><a href="/open-sources">Open source</a></li>
+</ul></div></div>				</div>
+						
+							<div class="footer-box span_1_of_4 col col-3 ">
+					<div id="nav_menu-9" class="footer-widget widget_nav_menu clr"><h4 class="widget-title">iO Blog</h4><div class="menu-blog-menu-container"><ul id="menu-blog-menu" class="menu"><li id="menu-item-1393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1393"><a href="/category/web">Web Development</a></li>
+<li id="menu-item-1398" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1398"><a href="/category/mobile">Mobile Development</a></li>
+<li id="menu-item-1403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1403"><a href="/category/cloud">Cloud Technology</a></li>
+<li id="menu-item-1408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1408"><a href="/category/creative-design/">Creative and Design</a></li>
+</ul></div></div>				</div>
+			
+							<div class="footer-box span_1_of_4 col col-4">
+					<div id="nav_menu-10" class="footer-widget widget_nav_menu clr"><h4 class="widget-title">Support</h4><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1283"><a href="/about-us">About us</a></li>
+<li id="menu-item-1278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1278"><a href="/contact">Send feedback</a></li>
+<li id="menu-item-2459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2459"><a href="https://static.iotech.co.th/contact/">Contact</a></li>
+<li id="menu-item-1418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1418"><a href="/research">Research</a></li>
+</ul></div></div>				</div>
+			
+		
+	</div>
+
+	
+</div>
+
+
+
+<div id="footer-bottom" class="clr">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+			<div id="footer-bottom-menu" class="navigation clr">
+				<div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-1298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1298"><a href="/career">Career</a></li>
+<li id="menu-item-1503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1503"><a href="https://static.iotech.co.th/privacy/">Privacy Policy</a></li>
+<li id="menu-item-1498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1498"><a href="https://static.iotech.co.th/term/">Terms of Service</a></li>
+</ul></div>
+			</div>
+
+		
+		
+			<div id="copyright" class="clr" role="contentinfo">
+				© 2018 - iOTech Enterprise Co.,Ltd.			</div>
+
+		
+	</div>
+
+	
+</div>
+
+        
+    </div>
+
+    
+</footer></div>
+
+    
+</div>
+<div class="fb-customerchat" page_id="1742745845985242">
+</div>
+
+
+
+
+<div id="sidr-close">
+	<a href="#" class="toggle-sidr-close">
+		<i class="icon icon-close"></i><span class="close-text">Close Menu</span>
+	</a>
+</div>
+    
+	<div id="mobile-nav" class="navigation clr">
+
+		<ul id="menu-main-menu-1" class="mobile-menu dropdown-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-424"><a href="https://static.iotech.co.th/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-138"><a href="https://static.iotech.co.th/products-and-services/">Service</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://static.iotech.co.th/products-and-services/cloud-solution/">Cloud Solution</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-872"><a href="/open-sources">Open source</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2846"><a href="https://static.iotech.co.th/web-development/">Web Development Service</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2845"><a href="https://static.iotech.co.th/moblie-application/">Moblie Application Service</a></li>
+</ul></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2465"><a href="/blog">Blog</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2583"><a href="https://static.iotech.co.th/category/cloud/">Cloud Technology</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2584"><a href="https://static.iotech.co.th/category/creative-design/">Creative and Design</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2849"><a href="https://static.iotech.co.th/web/">Web Development</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2848"><a href="https://static.iotech.co.th/mobile/">Mobile Development</a></li>
+</ul></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="https://static.iotech.co.th/about-us/">About us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2407"><a href="#">Contact us</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a href="https://static.iotech.co.th/contact/">Contact form</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3117"><a href="https://static.iotech.co.th/career/">Career</a></li>
+</ul></li>
+</ul></div>
+
+
+    
+<div id="mobile-menu-search" class="clr">
+	<form method="get" action="https://static.iotech.co.th/" class="mobile-searchform">
+		<input type="search" name="s" autocomplete="off" placeholder="Search"><button type="submit" class="searchform-submit">
+			<i class="icon icon-magnifier"></i>
+		</button>
+			</form>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static.iotech.co.th\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://static.iotech.co.th/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static.iotech.co.th/wp-includes/js/imagesloaded.min.js"></script><script type="text/javascript" src="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js"></script><script type="text/javascript" src="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"drop_down","sidrSource":"#sidr-close, #mobile-nav, #site-header .oceanwp-social-menu, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+/* ]]> */
+</script><script type="text/javascript" src="https://static.iotech.co.th/wp-content/themes/oceanwp/assets/js/main.min.js"></script></body></html>
